@@ -1,2 +1,2 @@
-# Taxonnomy-Visualization
+# Taxonomy-Visualization
 	Requirements
