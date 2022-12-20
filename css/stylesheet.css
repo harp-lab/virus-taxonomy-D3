@@ -1,12 +1,4 @@
 
-.vanish span:hover {
-    background-color: #D1EDFF;
-}
-
-.vanish .h2 {
-    color: #99D7FF;
-}
-
 .vanish {
     font-size: large;
     font-style: italic;
@@ -124,29 +116,6 @@ body {
     border-radius: 10px;
 }
 
-.node, .clickable {
-    cursor: pointer;
-}
-
-.node circle {
-    stroke: black;
-    stroke-width: 3px;
-}
-
-.node text {
-    font-weight: bolder;
-    font-style: italic;
-    font-size: 150;
-    text-align: right;
-    background: white;
-    font: 'Poppins', sans-serif;
-}
-
-.link {
-    fill: none;
-    stroke: #ccc;
-    stroke-width: 2px;
-}
 
 h1 {
     font-family: var(--mt-pff);
