@@ -32,8 +32,9 @@ BEGIN
 		--==========================================================================================================
 		DECLARE @speciesRankIndex AS INT = (
 			SELECT TOP 1 rank_index
-			FROM v_taxon_rank
-			WHERE name = 'species'
+			FROM taxon_rank
+			WHERE rank_name = 'species'
+			AND tree_id = @treeID
 		)
 
 		--==========================================================================================================

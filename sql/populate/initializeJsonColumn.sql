@@ -26,8 +26,9 @@ BEGIN
 	--==========================================================================================================
 	DECLARE @speciesRankIndex AS INT = (
 		SELECT TOP 1 rank_index
-		FROM v_taxon_rank
-		WHERE name = 'species'
+		FROM taxon_rank
+		WHERE rank_name = 'species'
+		AND tree_id = @treeID
 	)
 
 	--==========================================================================================================
@@ -48,21 +49,24 @@ BEGIN
 			WHEN ISNULL(tj.has_unassigned_siblings, 0) = 0 THEN 'false' ELSE 'true'
 		END +','+
 		'"name":'+CASE
-			WHEN tn.name IS NULL THEN 'null' ELSE '"'+tn.name+'"'
+			WHEN tn.name IS NULL THEN '"Unassigned"' ELSE '"'+tn.name+'"'
 		END +','+
 		'"parentDistance":'+CAST(ISNULL(tj.parent_distance,1) AS VARCHAR(2))+','+
 		'"rankIndex":'+CAST(tj.rank_index AS VARCHAR(2))+','+
-		'"rankName":"'+tr.name+'",' +
-		--'"tj_id":'+CAST(tj.id AS VARCHAR(12))+','+ -- dmd testing 101722
+		'"rankName":"'+tr.rank_name+'",' +
 		'"taxNodeID":'+CASE
 			WHEN tj.taxnode_id IS NULL THEN 'null' ELSE CAST(tj.taxnode_id AS VARCHAR(12))
 		END +','
 
 	FROM taxon_json tj
-	JOIN v_taxon_rank tr ON tr.rank_index = tj.rank_index
+	JOIN taxon_rank tr ON (
+		tr.rank_index = tj.rank_index
+		AND tr.tree_id = @treeID
+	)
 	LEFT JOIN taxonomy_node tn ON tn.taxnode_id = tj.taxnode_id
+	WHERE tj.tree_id = @treeID
 
-
+	
 	-- Variables used by ranked_node_cursor
 	DECLARE @id AS INT
 	DECLARE @rankIndex AS INT
@@ -80,6 +84,7 @@ BEGIN
 
 		FROM taxon_json tj
 		WHERE tj.rank_index < @speciesRankIndex
+		AND tj.tree_id = @treeID
 		ORDER BY tj.rank_index DESC
 
 	OPEN ranked_node_cursor  
@@ -95,8 +100,16 @@ BEGIN
 				SELECT TOP 1000000 nodeJSON = '{' +
 					tj.json +
 					'"children":'+ CASE
+
+						-- Don't include species
 						WHEN tj.rank_index = @speciesRankIndex THEN 'null'
+
+						-- Use "null" instead of empty JSON (or an actual NULL).
 						WHEN tj.child_json IS NULL OR LEN(tj.child_json) < 1 THEN 'null'
+
+						-- If this is the tree node, add the legend JSON before the other child nodes.
+						--WHEN tj.taxnode_id = tj.tree_id THEN '['+@legendJSON+','+tj.child_json+']'
+
 						ELSE '['+tj.child_json+']'
 					END +
 				'}'
@@ -127,7 +140,10 @@ BEGIN
 					ELSE '{'+tj.json+'"children":null}'
 				END
 				FROM taxon_json tj
-				JOIN taxonomy_node tn ON tn.taxnode_id = tj.taxnode_id
+				JOIN taxonomy_node tn ON (
+					tn.taxnode_id = tj.taxnode_id
+					AND tn.tree_id = tj.tree_id
+				)
 				WHERE tj.parent_id = @id
 				AND tj.tree_id = @treeID
 				AND tj.rank_index = @speciesRankIndex

@@ -74,9 +74,9 @@ BEGIN
 			tn.tree_id
 
 		FROM taxonomy_node tn
-		JOIN v_taxon_rank tr ON tr.id = tn.level_id
+		JOIN taxon_rank tr ON tr.level_id = tn.level_id
 		LEFT JOIN taxonomy_node ptn on ptn.taxnode_id = tn.parent_id
-		LEFT JOIN v_taxon_rank ptr ON ptr.id = ptn.level_id
+		LEFT JOIN taxon_rank ptr ON ptr.level_id = ptn.level_id
 		WHERE tn.tree_id = @treeID
 	) taxa
 

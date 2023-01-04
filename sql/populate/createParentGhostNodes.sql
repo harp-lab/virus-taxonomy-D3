@@ -44,6 +44,7 @@ BEGIN
 			FROM taxon_json
 			WHERE parent_taxnode_id = @treeID	-- Child nodes of the tree node.
 			AND taxnode_id <> @treeID			-- Exclude the tree node
+			AND tree_id = @treeID				-- Limit the tree / MSL release
 			AND is_ghost_node = 0
 			AND rank_index > 1					-- Exclude realm (and tree)
 		)
@@ -103,6 +104,7 @@ BEGIN
 					AND ghost.[source] = 'P' -- This is a "parent" ghost node
 					AND ghost.rank_index = notghost.rank_index - 1
 					AND ghost.parent_taxnode_id = @treeID
+					AND ghost.tree_id = @treeID
 				)
 
 			FROM taxon_json notghost
@@ -110,6 +112,7 @@ BEGIN
 			AND notghost.taxnode_id <> @treeID			-- Exclude the tree node
 			AND notghost.is_ghost_node = 0				-- No ghost nodes
 			AND notghost.rank_index > 1					-- Exclude realm (and tree)
+			AND notghost.tree_id = @treeID
 
 		OPEN top_level_cursor  
 		FETCH NEXT FROM top_level_cursor INTO @id, @parentID
