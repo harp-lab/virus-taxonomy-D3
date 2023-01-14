@@ -15,43 +15,24 @@ options.text(function (d, i) {
 
 function change(e, d) {
     d3.select('.non').remove('div');
-    d3.select('.color').append('div').attr("class", "non")
+    d3.select('.color').append('div').attr("class", "non");
+    var species = "data/" + e.target.value + "_species" + ".json";
     var x = "data/" + e.target.value + ".json";
     console.log(x);
     d3.json(x).then(function (data) {
         console.log(data)
-
-
-        var k = 0;
-        var flag = false;
-        var trigger = "";
-        var xt = "";
         var genus = false;
-        var n = 0;
-        var p = 0;
-        var c = 0;
-        var o = 0;
-        var f = 0;
-        var g = 0;
-        var r = 0;
         var x1 = 0;
-        var dm = 0;
-        var id = 0;
-        var r = 0;
-        var rank = 0;
-        var text;
-        var order = true;
-        let l = 0;
-        var margin = {top: 50, right: 90, bottom: 50, left: 90};
+        var margin = { top: 50, right: 90, bottom: 50, left: 90 };
         width = 1800 - margin.left - margin.right,
             height = $(window).height() - margin.top - margin.bottom;
 
         function handleZoom(e) {
             d3.select('svg g')
-                .attr('transform', e.transform)
+                .attr("transform", e.transform);
+
 
         }
-
 
         let zoom = d3.zoom()
             .on('zoom', handleZoom)
@@ -74,8 +55,7 @@ function change(e, d) {
         }
 
         function dragend(d) {
-            d.fixed = false
-
+            d.fixed = false;
         }
 
         const ds = d3.hierarchy(data, function (d) {
@@ -122,14 +102,14 @@ function change(e, d) {
                 .attr("transform", "translate("
                     + margin.left + "," + margin.top + ")")
 
-            var layoutRoot = svg
-                .append("svg:g")
-                .attr("class", "color");
-
+            // var layoutRoot = svg
+            //     .append("svg:g")
+            //     .attr("class", "color");
             d3.select("svg")
-
                 .call(zoom)
+
                 .on("dblclick.zoom", null);
+
 
             var div = d3.select("#legend").append('div');
             div.selectAll("h2").data(ds).enter().append("h2");
@@ -143,7 +123,7 @@ function change(e, d) {
 
             var tree = d3.tree().size([height, width]);
 
-            ds.x0 = height / 4;
+            ds.x0 = (height / 4);
             ds.y0 = 0;
 
             function pageNodes(d, maxNode) {
@@ -187,10 +167,6 @@ function change(e, d) {
             ds.children.forEach(collapse);
             update(ds);
 
-            function expand(d) {
-
-            }
-
             function collapse(d) {
 
                 if (d.children) {
@@ -232,8 +208,11 @@ function change(e, d) {
 
                 parent.forEach(function (d) {
 
+
                     d.x = d.x * 5;
                     d.y = (d.data.rankIndex) * 500 + 500;
+
+
 
                 });
                 var children = svg.selectAll('g.node')
@@ -248,9 +227,6 @@ function change(e, d) {
                     .on('click', click)
 
                     .on("mouseover", mouseover)
-                    .on("mousemove", function (d) {
-                        mousemove(d);
-                    })
                     .on("mouseout", mouseout);
 
                 Enter.append('rect')
@@ -318,8 +294,6 @@ function change(e, d) {
                             return d._children ? "#fff" : "#99D7FF";
                         } else if (d.data.rankName === "subgenus") {
                             return d._children ? "#fff" : "#99D7FF";
-                        } else if (d.data.rankName === "Species") {
-                            return d._children ? "#fff" : "#D1EDFF";
                         }
                         findParent(d)
 
@@ -332,11 +306,13 @@ function change(e, d) {
                     .attr('r', function (d) {
 
                         if (d.data.name !== null) {
-                            return 12;
+                            return 15;
                         } else {
                             return "0px"
                         }
                     })
+                    .style("stroke", "black")
+                    .style("stroke-width", "2px")
                     .style("fill", function (d) {
 
                         if (d.data.rankName === "realm") {
@@ -365,10 +341,8 @@ function change(e, d) {
                             return d._children ? "#fff" : "#258DE4";
                         } else if (d.data.rankName === "genus") {
                             return d._children ? "#fff" : "#99D7FF";
-                        } else if (d.data.rankName === "subgenus") {
+                        } else if(d.data.rankName === "subgenus") {
                             return d._children ? "#fff" : "#99D7FF";
-                        } else if (d.data.rankName === "Species") {
-                            return d._children ? "#fff" : "#D1EDFF";
                         }
                         findParent(d)
 
@@ -388,34 +362,28 @@ function change(e, d) {
                     .attr("text-align", "right")
 
                     .attr("x", function (d, i) {
-                        if (d.data.rankName !== "subgenus") {
-                            return d.children || d._children ? -10 : 10;
-                        } else if (d.data.rankname === "subgenus") {
-                            return d.children || d._children ? 10 : -10;
-                        }
+
+                        return d.children || d._children ? -10 : 10;
+
                     })
                     .attr("text-anchor", function (d) {
-                        if (d.data.rankName !== "subgenus") {
-                            return d.children || d._children ? "end" : "start";
-                        } else if (d.data.rankname === "subgenus") {
-                            return d.children || d._children ? "start" : "end";
-                        }
-                    })
-                    .attr("xlink:href", function (d) {
-                        return "http://www.example.com/flare/" + d.data.rankName;
+
+                        return d.children || d._children ? "start" : "end";
+
                     })
 
                     .style("font-size", "50px")
                     .style("font-weight", "bold")
+                    .style("font-style", "italic")
                     .style("font-family", "Poppins")
-
-                    .attr("dx", "-10")
+                    .style("font", "san-serif")
+                    .attr("dx", "50")
                     .attr("dy", "10")
-                    .text(function (d, i) {
+                    .text(function (d) {
                         if ((d.data.name === null) || d.data.rankName === "tree") {
                             if (d.data.taxNodeID === "legend") {
                                 return d.data.rankName;
-                            } else if (d.data.rankName === 'realm') {
+                            } else if (d.data.rankName === 'realm' || d.data.has_assigned_siblings === true) {
                                 return "Unassigned";
                             } else {
                                 return ""
@@ -427,11 +395,8 @@ function change(e, d) {
                         ;
                     })
                     .attr("fill", function (d) {
-
-
                         return "#000000";
                     })
-
                     .on('click', add)
 
                 var Update = Enter.merge(children);
@@ -507,8 +472,6 @@ function change(e, d) {
                             return d._children ? "#fff" : "#99D7FF";
                         } else if (d.data.rankName === "subgenus") {
                             return d._children ? "#fff" : "#99D7FF";
-                        } else if (d.data.rankName === "Species") {
-                            return d._children ? "#fff" : "#D1EDFF";
                         }
                         findParent(d)
 
@@ -519,7 +482,7 @@ function change(e, d) {
                     .attr('r', function (d) {
 
                         if (d.data.name !== null) {
-                            return 5
+                            return 15
                         } else {
                             return "0px"
                         }
@@ -554,8 +517,6 @@ function change(e, d) {
                             return d._children ? "#fff" : "#99D7FF";
                         } else if (d.data.rankName === "subgenus") {
                             return d._children ? "#fff" : "#99D7FF";
-                        } else if (d.data.rankName === "Species") {
-                            return d._children ? "#fff" : "#D1EDFF";
                         }
                         findParent(d)
 
@@ -565,7 +526,7 @@ function change(e, d) {
                         if ((d.data.name === null) || d.data.rankName === "tree") {
                             if (d.data.taxNodeID === "legend") {
                                 return d.data.rankName;
-                            } else if (d.data.rankName === 'realm') {
+                            } else if (d.data.rankName === 'realm' || d.data.has_unassigned_siblings === true) {
                                 return "Unassigned";
                             } else {
                                 return ""
@@ -621,8 +582,6 @@ function change(e, d) {
                             return d._children ? "#fff" : "#99D7FF";
                         } else if (d.data.rankName === "subgenus") {
                             return d._children ? "#fff" : "#99D7FF";
-                        } else if (d.data.rankName === "Species") {
-                            return d._children ? "#fff" : "#D1EDFF";
                         }
                         findParent(d)
 
@@ -641,9 +600,7 @@ function change(e, d) {
 
                         }
                     })
-                    .attr("xlink:href", function (d) {
-                        return "http://example.com/" + d.data.name;
-                    })
+
                     .clone(true).lower()
                     .attr("stroke-linejoin", "round")
                     .attr("stroke-width", 10)
@@ -651,36 +608,8 @@ function change(e, d) {
 
 
                     .style("fill", function (d) {
-                        if (d.data.rankName === "realm" && d.data.taxNodeID !== 'legend') {
+                        if (d.data.taxNodeID !== 'legend') {
                             return d._children ? "#000000" : "#006CB5"
-                        } else if (d.data.rankName === "subrealm" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#006CB5"
-                        } else if (d.data.rankName === "kingdom" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#006CB5";
-                        } else if (d.data.rankName === "subkingdom" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#006CB5";
-                        } else if (d.data.rankName === "phylum" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#006CB5";
-                        } else if (d.data.rankName === "subphylum" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#006CB5";
-                        } else if (d.data.rankName === "class" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#006CB5";
-                        } else if (d.data.rankName === "subclass" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#006CB5";
-                        } else if (d.data.rankName === "order" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#006CB5";
-                        } else if (d.data.rankName === "suborder" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#006CB5";
-                        } else if (d.data.rankName === "family" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#258DE4";
-                        } else if (d.data.rankName === "subfamily" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#258DE4";
-                        } else if (d.data.rankName === "genus" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#006600";
-                        } else if (d.data.rankName === "subgenus") {
-                            return d._children ? "#fff" : "#fff";
-                        } else if (d.data.rankName === "Species" && d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#fff" : "#D1EDFF";
                         }
                         findParent(d)
 
@@ -713,9 +642,12 @@ function change(e, d) {
                         if (((d.data.rankName === "subgenus" && d.data.name == null) || d.data.taxNodeID === "legend") && d.data.name === null) {
                             return diagonal(0, 0)
                         }
-                        var pos = {x: source.x0, y: source.y0}
+                        var pos = { x: source.x0, y: source.y0 }
                         return diagonal(pos, pos)
                     })
+                    .style("stroke-width", "2px")
+                    .style("fill", "none")
+                    .style("stroke", "#ccc")
                     .style("display", function (d) {
                         if (d.depth === 1 || (d.data.rankIndex === 14 && d.data.name == null) || d.data.taxNodeID === "legend") { //Is top link
                             return 'none';
@@ -727,37 +659,10 @@ function change(e, d) {
                     .attr('d', function (d) {
                         return diagonal(d, d.parent)
                     })
+
                     .style("stroke", function (d) {
-                        if (d.data.rankName === "realm") {
+                        if (d.data.name !== "down" || d.data.name !== "up") {
                             return d._children ? "#808080" : "#006CB5"
-                        } else if (d.data.rankName === "subrealm") {
-                            return d._children ? "#808080" : "#006CB5"
-                        } else if (d.data.rankName === "kingdom") {
-                            return d._children ? "#808080" : "#006CB5";
-                        } else if (d.data.rankName === "subkingdom") {
-                            return d._children ? "#808080" : "#006CB5";
-                        } else if (d.data.rankName === "phylum") {
-                            return d._children ? "#808080" : "#006CB5";
-                        } else if (d.data.rankName === "subphylum") {
-                            return d._children ? "#808080" : "#006CB5";
-                        } else if (d.data.rankName === "class") {
-                            return d._children ? "#808080" : "#006CB5";
-                        } else if (d.data.rankName === "subclass") {
-                            return d._children ? "#808080" : "#006CB5";
-                        } else if (d.data.rankName === "order") {
-                            return d._children ? "#808080" : "#006CB5";
-                        } else if (d.data.rankName === "suborder") {
-                            return d._children ? "#808080" : "#006CB5";
-                        } else if (d.data.rankName === "family") {
-                            return d._children ? "#808080" : "#006CB5";
-                        } else if (d.data.rankName === "subfamily") {
-                            return d._children ? "#808080" : "#006CB5";
-                        } else if (d.data.rankName === "genus") {
-                            return d._children ? "#808080" : "#006CB5";
-                        } else if (d.data.rankName === "subgenus") {
-                            return d._children ? "#808080" : "#006CB5";
-                        } else if (d.data.rankName === "Species") {
-                            return d._children ? "#fff" : "#D1EDFF";
                         }
                         findParent(d)
 
@@ -768,7 +673,7 @@ function change(e, d) {
                 var linkExit = link.exit().transition()
                     .duration(duration)
                     .attr('d', function (d) {
-                        var pos = {x: source.x, y: source.y}
+                        var pos = { x: source.x, y: source.y }
                         return diagonal(pos, pos)
                     })
                     .remove();
@@ -827,34 +732,37 @@ function change(e, d) {
                     }
                     update(d);
                 }
-
                 function mouseover(e, d) {
-                    console.log(d.data.name)
                     var test = d.data.name;
                     var c = d.data.child_counts;
-                    var div = d3.select("body").append("div")
-                        .attr("class", "tooltip")
-                        .style("opacity", 1)
-                        .style("left", (event.pageX + 70) + "px")
-                        .style("top", (event.pageY) + "px")
+                    if (d.data.taxNodeID !== "legend" && d.data.rankName !== "tree") {
+                        d3.select("body").selectAll('div.tooltip').remove();
+                        console.log("d.data.taxNodeID")
+                        var div = d3.select("body").append("div")
+                            .attr("class", "tooltip")
+                            .style("opacity", 1)
+                            .style("left", (event.pageX + 70) + "px")
+                            .style("top", (event.pageY) + "px")
 
-                        .html(
-                            "<table style='font-size: 12px; font-family: sans-serif;' >" +
-                            "<tr><td>Rank Name: </td><td>" + d.data.rankName + "</td></tr>" +
-                            "<tr><td>Child count: </td><td>" + c + "</td></tr>" +
+                            .html(
+                                "<table style='font-size: 12px; font-family: sans-serif;' >" +
+                                "<tr><td>Rank Name: </td><td>" + d.data.rankName + "</td></tr>" +
+                                "<tr><td>Child count: </td><td>" + c + "</td></tr>" +
+                                '<a href="https://ictv.global/taxonomy/taxondetails?taxnode_id=' + d.data.taxNodeID + '" target=_blank>' + d.data.name + "</a>" +
+                                "</table>"
 
-                            "</table>"
-                        )
+
+                            );
+                    }
+
+
                 }
-
                 function mousemove(d) {
-                    d3.select("body").selectAll('div.tooltip').style("opacity", 1);
+                    d3.select("body").transition().delay(1000);
                 }
-
                 function mouseout(d) {
-                    d3.select("body").selectAll('div.tooltip').remove();
+                    d3.select("body").selectAll('div.tooltip').transition().delay(750).remove();
                 }
-
             }
         }
 
@@ -864,7 +772,8 @@ function change(e, d) {
             d3.select('.vanish').append("h1").text("")
             var name = []
             if (d.data.rankName === "genus" || "sub genus") {
-                d3.json("species.json").then(function (species) {
+
+                d3.json(species).then(function (species) {
                     const sp = d3.hierarchy(species, function (s) {
                         return s.children
                     })
@@ -877,6 +786,8 @@ function change(e, d) {
                         name.push(row.name)
                     })
                     d3.select('.vanish').append("h2").text("Species of" + "  " + d.data.name)
+                    x = d.data.taxNodeID;
+
                     div.selectAll('span')
                         .style('font-size', "15px")
                         .style('font-style', "italic")
@@ -892,6 +803,13 @@ function change(e, d) {
                         .text(function (d, i) {
                             console.log("hi")
                             return d
+                        })
+                        .on('click', function (d) {
+                            console.log('open tab')
+                            window.open(
+                                "https://ictv.global/taxonomy/taxondetails?taxnode_id=" + x,
+                                '_blank'
+                            );
                         })
                         .append('br')
                         .transition("duration", 5);

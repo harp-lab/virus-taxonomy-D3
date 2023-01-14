@@ -1,4 +1,3 @@
-
 .vanish span:hover {
     background-color: #D1EDFF;
 }
@@ -28,6 +27,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -37,6 +37,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -46,6 +47,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -55,6 +57,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -64,6 +67,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -95,7 +99,7 @@ body {
 .color {
     background-color: white;
     width: 65%;
-    float: left;
+    float: left
 }
 
 .species {
@@ -124,30 +128,6 @@ body {
     border-radius: 10px;
 }
 
-.node, .clickable {
-    cursor: pointer;
-}
-
-.node circle {
-    stroke: black;
-    stroke-width: 3px;
-}
-
-.node text {
-    font-weight: bolder;
-    font-style: italic;
-    font-size: 150;
-    text-align: right;
-    background: white;
-    font: 'Poppins', sans-serif;
-}
-
-.link {
-    fill: none;
-    stroke: #ccc;
-    stroke-width: 2px;
-}
-
 h1 {
     font-family: var(--mt-pff);
     color: #008000;
@@ -160,7 +140,7 @@ div.tooltip {
     width: auto;
     height: auto;
     padding: 2px;
-    background: #ffff99;
+    background: #f3f3ef;
     border: solid 1px #aaa;
     border-radius: 8px;
 }
