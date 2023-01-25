@@ -21,9 +21,8 @@ AS
 BEGIN
 	SET XACT_ABORT, NOCOUNT ON
 
-
 	-- Delete any existing records for this tree ID.
-	DELETE FROM taxon_json WHERE tree_id = @treeID
+	--DELETE FROM taxon_json WHERE tree_id = @treeID
 
 	-- Add taxonomy node records to the taxon JSON table.
 	INSERT INTO taxon_json (
@@ -65,6 +64,7 @@ BEGIN
 					FROM taxonomy_node species
 					WHERE species.parent_id = tn.taxnode_id
 					AND species.level_id = 600
+					AND species.tree_id = @treeID
 				) THEN 1 ELSE 0
 			END,
 			parent_rank_index = ptr.rank_index,
@@ -74,9 +74,18 @@ BEGIN
 			tn.tree_id
 
 		FROM taxonomy_node tn
-		JOIN taxon_rank tr ON tr.level_id = tn.level_id
-		LEFT JOIN taxonomy_node ptn on ptn.taxnode_id = tn.parent_id
-		LEFT JOIN taxon_rank ptr ON ptr.level_id = ptn.level_id
+		JOIN taxon_rank tr ON (
+			tr.level_id = tn.level_id
+			AND tr.tree_id = @treeID
+		)
+		LEFT JOIN taxonomy_node ptn ON (
+			ptn.taxnode_id = tn.parent_id
+			AND ptn.tree_id = @treeID
+		)
+		LEFT JOIN taxon_rank ptr ON (
+			ptr.level_id = ptn.level_id
+			AND ptr.tree_id = @treeID
+		)
 		WHERE tn.tree_id = @treeID
 	) taxa
 

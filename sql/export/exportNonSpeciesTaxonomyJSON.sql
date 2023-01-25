@@ -41,7 +41,7 @@ BEGIN
 				'"children":[' AS rankJSON
 
 			FROM taxon_rank tr
-			WHERE tr.tree_id = 202100000
+			WHERE tr.tree_id = @treeID
 			AND tr.rank_index > 0
 			ORDER BY tr.rank_index
 		) ranksJSON
@@ -53,7 +53,7 @@ BEGIN
 		FROM (
 			SELECT ']}' AS taxonEnd
 			FROM taxon_rank tr
-			WHERE tr.tree_id = 202100000
+			WHERE tr.tree_id = @treeID
 			AND tr.rank_index > 0
 		) taxonEnds
 	)

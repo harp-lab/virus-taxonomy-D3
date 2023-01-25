@@ -97,7 +97,7 @@ BEGIN
 		DECLARE @childJSON AS NVARCHAR(MAX) = (
 			SELECT child_json = STRING_AGG(nodeJSON, ',')
 			FROM (
-				SELECT TOP 1000000 nodeJSON = '{' +
+				SELECT TOP 10000000 nodeJSON = '{' +
 					tj.json +
 					'"children":'+ CASE
 
@@ -106,9 +106,6 @@ BEGIN
 
 						-- Use "null" instead of empty JSON (or an actual NULL).
 						WHEN tj.child_json IS NULL OR LEN(tj.child_json) < 1 THEN 'null'
-
-						-- If this is the tree node, add the legend JSON before the other child nodes.
-						--WHEN tj.taxnode_id = tj.tree_id THEN '['+@legendJSON+','+tj.child_json+']'
 
 						ELSE '['+tj.child_json+']'
 					END +
