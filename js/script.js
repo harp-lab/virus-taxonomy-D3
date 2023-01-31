@@ -1,9 +1,14 @@
 var years = ["--Select Year--", "1998", "2000", "2021", "2022", "New"]
+var selected;
 var dropDown = d3.select("#years")
     .append("select")
     .attr("class", "selection")
     .attr("name", "Years")
-    .on("change", change);
+    .on("change", change)
+    .attr("values", function (d) {
+        return;
+    })
+
 var options = dropDown.selectAll("option")
     .data(years)
     .enter()
@@ -12,6 +17,7 @@ options.text(function (d, i) {
     // console.log(d)
     return (d)
 })
+
 
 function change(e, d) {
     d3.select('.non').remove('div');
@@ -24,16 +30,13 @@ function change(e, d) {
         var genus = false;
         var x1 = 0;
         var margin = { top: 50, right: 90, bottom: 50, left: 90 };
-        width = 1800 - margin.left - margin.right,
+        width = 2000 - margin.left - margin.right,
             height = $(window).height() - margin.top - margin.bottom;
 
         function handleZoom(e) {
             d3.select('svg g')
                 .attr("transform", e.transform);
-
-
         }
-
         let zoom = d3.zoom()
             .on('zoom', handleZoom)
 
@@ -91,6 +94,8 @@ function change(e, d) {
             .attr('dy', function (d) {
                 return d.data.rankIndex;
             })
+
+        
         var i = 0;
         var duration = 900;
 
@@ -102,10 +107,9 @@ function change(e, d) {
                 .attr("transform", "translate("
                     + margin.left + "," + margin.top + ")")
 
-            // var layoutRoot = svg
-            //     .append("svg:g")
-            //     .attr("class", "color");
             d3.select("svg")
+                .call(zoom.translateBy, "-3850", "-1800")
+                .call(zoom.scaleBy, "0.17")
                 .call(zoom)
 
                 .on("dblclick.zoom", null);
@@ -167,6 +171,7 @@ function change(e, d) {
             ds.children.forEach(collapse);
             update(ds);
 
+
             function collapse(d) {
 
                 if (d.children) {
@@ -209,7 +214,8 @@ function change(e, d) {
                 parent.forEach(function (d) {
 
 
-                    d.x = d.x * 5;
+
+                    d.x = d.x * 6;
                     d.y = (d.data.rankIndex) * 500 + 500;
 
 
@@ -306,13 +312,13 @@ function change(e, d) {
                     .attr('r', function (d) {
 
                         if (d.data.name !== null) {
-                            return 15;
+                            return 35;
                         } else {
                             return "0px"
                         }
                     })
                     .style("stroke", "black")
-                    .style("stroke-width", "2px")
+                    .style("stroke-width", "2.5px")
                     .style("fill", function (d) {
 
                         if (d.data.rankName === "realm") {
@@ -341,7 +347,7 @@ function change(e, d) {
                             return d._children ? "#fff" : "#258DE4";
                         } else if (d.data.rankName === "genus") {
                             return d._children ? "#fff" : "#99D7FF";
-                        } else if(d.data.rankName === "subgenus") {
+                        } else if (d.data.rankName === "subgenus") {
                             return d._children ? "#fff" : "#99D7FF";
                         }
                         findParent(d)
@@ -355,6 +361,10 @@ function change(e, d) {
                         return !d.data.parentDistance ? "none" : "all";
                     })
 
+                function getBB(ds) {
+                    ds.each(function (d) { d.bbox = this.getBBox(); })
+                }
+
                 Enter.append('text')
                     .attr("class", "print")
                     .attr("dy", '7')
@@ -362,14 +372,20 @@ function change(e, d) {
                     .attr("text-align", "right")
 
                     .attr("x", function (d, i) {
-
-                        return d.children || d._children ? -10 : 10;
-
+                        if (d.data.rankName !== "subgenus") {
+                            return d.children || d._children ? 10 : -10;
+                        }
+                        else if (d.data.rankname === "subgenus") {
+                            return d.children || d._children ? 10 : -10;
+                        }
                     })
                     .attr("text-anchor", function (d) {
-
-                        return d.children || d._children ? "start" : "end";
-
+                        if (d.data.rankName !== "subgenus") {
+                            return d.children || d._children ? "start" : "end";
+                        }
+                        else if (d.data.rankname === "subgenus") {
+                            return d.children || d._children ? "start" : "end";
+                        }
                     })
 
                     .style("font-size", "50px")
@@ -377,7 +393,7 @@ function change(e, d) {
                     .style("font-style", "italic")
                     .style("font-family", "Poppins")
                     .style("font", "san-serif")
-                    .attr("dx", "50")
+                    .attr("dx", "20")
                     .attr("dy", "10")
                     .text(function (d) {
                         if ((d.data.name === null) || d.data.rankName === "tree") {
@@ -398,6 +414,14 @@ function change(e, d) {
                         return "#000000";
                     })
                     .on('click', add)
+                    .call(getBB);
+
+                Enter.insert("rect", "text")
+                    .attr("x", function (d) { return d.bbox.x })
+                    .attr("y", function (d) { return d.bbox.y })
+                    .attr("width", function (d) { return d.bbox.width })
+                    .attr("height", function (d) { return d.bbox.height })
+                    .style("fill", "white");
 
                 var Update = Enter.merge(children);
                 Update.transition()
@@ -482,7 +506,7 @@ function change(e, d) {
                     .attr('r', function (d) {
 
                         if (d.data.name !== null) {
-                            return 15
+                            return 25
                         } else {
                             return "0px"
                         }
@@ -548,7 +572,7 @@ function change(e, d) {
 
                     .attr('r', function (d) {
                         if (d.data.name !== null) {
-                            return 12;
+                            return "20px";
                         } else {
                             return "0px"
                         }
@@ -591,9 +615,9 @@ function change(e, d) {
                     .attr("transform", function (d, i) {
                         if ((d.data.name === null) || d.data.rankName === "tree") {
                             if (d.data.taxNodeID === "legend" && d.data.rankName !== "subgenus") {
-                                return "rotate(-45 -10,10)";
+                                return "rotate(-45 150,-100)";
                             } else if (d.data.taxNodeID === "legend" && d.data.rankName === "subgenus") {
-                                return "rotate(-45 -50, 100) ";
+                                return "rotate(-45 150, -100) ";
                             } else {
                                 return "";
                             }
@@ -601,15 +625,22 @@ function change(e, d) {
                         }
                     })
 
-                    .clone(true).lower()
-                    .attr("stroke-linejoin", "round")
-                    .attr("stroke-width", 10)
-                    .attr("stroke", "white")
+                    // .clone(true).lower()
+                    // .attr("stroke-linejoin", "round")
+                    // .attr("stroke-width", 10)
+                    // .attr("stroke", "white")
 
 
                     .style("fill", function (d) {
+
+
                         if (d.data.taxNodeID !== 'legend') {
-                            return d._children ? "#000000" : "#006CB5"
+                            if (selected == d.data.name) {
+                                return d._children ? "#000000" : "#006CB5"
+                            }
+                            else {
+                                return "#000000"
+                            }
                         }
                         findParent(d)
 
@@ -716,6 +747,7 @@ function change(e, d) {
                 }
 
                 function click(event, d) {
+                    selected = d.data.name;
                     console.log("Click", d.data.name)
                     if (d.hasOwnProperty('page')) {
                         d.parent.children = d.parent.pages[d.page];
@@ -785,15 +817,15 @@ function change(e, d) {
                         console.log(row.name)
                         name.push(row.name)
                     })
-                    d3.select('.vanish').append("h2").text("Species of" + "  " + d.data.name)
+                    d3.select('.vanish').append("h4").text("Species of" + "  " + d.data.name)
                     x = d.data.taxNodeID;
 
                     div.selectAll('span')
-                        .style('font-size', "15px")
+                        .style('font-size', "4px")
                         .style('font-style', "italic")
                         .attr('fill', function (d, i) {
                             if (d.data.rankName === 'species') {
-                                return "#99D7FF";
+                                return "#006CB5";
                             }
                         })
 

@@ -7,9 +7,9 @@
 }
 
 .vanish {
-    font-size: large;
+    font-size: medium;
     font-style: italic;
-    color: #006600;
+    color: #006CB5;
 
     width: 3000px;
     height: 2000px;
@@ -78,10 +78,10 @@
     height: available;
 }
 
-.h2 {
+.h4 {
     font-style: italic;
     font-family: 'Poppins', sans-serif;
-    color: rgba(122, 202, 108, 0.63);
+    color: "#006CB5";
 }
 
 body {
@@ -106,7 +106,7 @@ body {
 
     overflow-x: hidden;
     background-color: whitesmoke;
-    width: 25%;
+    width: 20%;
     float: right;
 }
 
