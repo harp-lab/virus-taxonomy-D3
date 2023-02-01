@@ -1,12 +1,19 @@
-.vanish span:hover {
+
+/* dmd 01/31/23 Formerly .container */
+#d3_taxonomy_vis_container {
+    width: available;
+    height: available;
+}
+
+#d3_taxonomy_vis_container .vanish span:hover {
     background-color: #D1EDFF;
 }
 
-.vanish .h2 {
+#d3_taxonomy_vis_container .vanish .h2 {
     color: #99D7FF;
 }
 
-.vanish {
+#d3_taxonomy_vis_container .vanish {
     font-size: large;
     font-style: italic;
     color: #006600;
@@ -73,69 +80,61 @@
     }
 }
 
-.container {
-    width: available;
-    height: available;
-}
 
-.h2 {
+#d3_taxonomy_vis_container .h2 {
     font-style: italic;
     font-family: 'Poppins', sans-serif;
     color: rgba(122, 202, 108, 0.63);
 }
 
+/*
 body {
     width: available;
     height: available;
     overflow-x: hidden;
-}
+}*/
 
-.space {
+#d3_taxonomy_vis_container .space {
     width: 15%;
     height: available;
     background-color: white;
 }
 
-.color {
+#d3_taxonomy_vis_container .color {
     background-color: white;
     width: 65%;
     float: left
 }
 
-.species {
-
+#d3_taxonomy_vis_container .species {
     overflow-x: hidden;
     background-color: whitesmoke;
     width: 25%;
     float: right;
 }
 
-#test {
+/*#test {
     overflow-y: hidden;
     overflow-x: hidden;
-}
+}*/
 
-.color {
-    background-color: white;
-}
-
-#dropdown {
+#d3_taxonomy_vis_container #dropdown {
     width: 50%;
 }
 
-.selection {
+#d3_taxonomy_vis_container .selection {
     width: 50%;
     border-radius: 10px;
 }
 
-h1 {
+#d3_taxonomy_vis_container h1 {
     font-family: var(--mt-pff);
     color: #008000;
     background-color: hsl(0, 0%, 100%);
     font-size: 75;
 }
 
-div.tooltip {
+#d3_taxonomy_vis_container div.tooltip {
     position: absolute;
     width: auto;
     height: auto;
@@ -145,11 +144,24 @@ div.tooltip {
     border-radius: 8px;
 }
 
-
-.center {
+#d3_taxonomy_vis_container .center {
     text-align: center;
 }
 
-.light-bg {
+#d3_taxonomy_vis_container .light-bg {
     background-color: whitesmoke;
 }
+
+#d3_taxonomy_vis_container .node-text {
+    font-size: 50pt;
+    font-weight: bold;
+    font-style: italic;
+    text-align: right;
+}
+#d3_taxonomy_vis_container .legend-node-text {
+    font-size: 50pt;
+    /*font-weight: bold;*/
+    font-style: normal;
+    text-align: right;
+}
+
