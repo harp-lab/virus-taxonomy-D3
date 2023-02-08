@@ -30,7 +30,7 @@ function change(e, d) {
         var genus = false;
         var x1 = 0;
         var margin = { top: 50, right: 90, bottom: 50, left: 90 };
-        width = 2000 - margin.left - margin.right,
+        width = 1900 - margin.left - margin.right,
             height = $(window).height() - margin.top - margin.bottom;
 
         function handleZoom(e) {
@@ -106,10 +106,12 @@ function change(e, d) {
                 .append("g")
                 .attr("transform", "translate("
                     + margin.left + "," + margin.top + ")")
+            
+                      
 
             d3.select("svg")
-                .call(zoom.translateBy, "-3850", "-1800")
-                .call(zoom.scaleBy, "0.17")
+                .call(zoom.translateBy, "-4300", "-2000")
+                .call(zoom.scaleBy, "0.152")
                 .call(zoom)
 
                 .on("dblclick.zoom", null);
@@ -216,7 +218,7 @@ function change(e, d) {
 
 
                     d.x = d.x * 6;
-                    d.y = (d.data.rankIndex) * 500 + 500;
+                    d.y = (d.data.rankIndex) * 550 + 600;
 
 
 
@@ -235,6 +237,34 @@ function change(e, d) {
                     .on("mouseover", mouseover)
                     .on("mouseout", mouseout);
 
+            function getRankColor(hasChildren_, rankName_) {
+                switch (rankName_) {                
+                    case "realm":
+                    case "subrealm":               
+                        return hasChildren_ ? "#fff" : "#006600";               
+                    case "kingdom":                
+                    case "subkingdom":
+                        return hasChildren_ ? "#fff" : "#278627";
+                    case "phylum":
+                    case "subphylum":
+                        return hasChildren_ ? "#fff" : "#00426D";
+                    case "class":
+                    case "subclass":
+                        return hasChildren_ ? "#fff" : "#3D79AA";
+                    case "order":
+                    case "suborder":
+                        return hasChildren_ ? "#fff" : "#006CB5";
+                    case "family":
+                    case "subfamily":
+                        return hasChildren_ ? "#fff" : "#258DE4";
+                    case "genus":
+                    case "subgenus":
+                        return hasChildren_ ? "#fff" : "#99D7FF";
+                    default:
+                        return null;
+                }
+            
+            }                             
                 Enter.append('rect')
                     .style("stroke", "black")
                     .style("stroke-width", "2px")
@@ -271,46 +301,15 @@ function change(e, d) {
                         }
                     })
                     .style("fill", function (d) {
-
-                        if (d.data.rankName === "realm") {
-                            return d._children ? "	#fff" : "#006600"
-                        } else if (d.data.rankName === "subrealm") {
-                            return d._children ? "	#fff" : "#006600"
-                        } else if (d.data.rankName === "kingdom") {
-                            return d._children ? "#fff" : "#278627";
-                        } else if (d.data.rankName === "subkingdom") {
-                            return d._children ? "#fff" : "#278627";
-                        } else if (d.data.rankName === "phylum") {
-                            return d._children ? "#fff" : "#00426D";
-                        } else if (d.data.rankName === "subphylum") {
-                            return d._children ? "#fff" : "#00426D";
-                        } else if (d.data.rankName === "class") {
-                            return d._children ? "#fff" : "#3D79AA";
-                        } else if (d.data.rankName === "subclass") {
-                            return d._children ? "#fff" : "#3D79AA";
-                        } else if (d.data.rankName === "order") {
-                            return d._children ? "#fff" : "#006CB5";
-                        } else if (d.data.rankName === "suborder") {
-                            return d._children ? "#fff" : "#006CB5";
-                        } else if (d.data.rankName === "family") {
-                            return d._children ? "#fff" : "#258DE4";
-                        } else if (d.data.rankName === "subfamily") {
-                            return d._children ? "#fff" : "#258DE4";
-                        } else if (d.data.rankName === "genus") {
-                            return d._children ? "#fff" : "#99D7FF";
-                        } else if (d.data.rankName === "subgenus") {
-                            return d._children ? "#fff" : "#99D7FF";
-                        }
-                        findParent(d)
-
-
+                        let color = getRankColor(!!d._children, d.data.rankName);                   
+                        if (!!color) { return color; }                                                             
+                        findParent(d);                    
                     })
                     .attr('cursor', 'pointer');
 
                 Enter.append('circle')
                     .attr('class', 'node')
                     .attr('r', function (d) {
-
                         if (d.data.name !== null) {
                             return 35;
                         } else {
@@ -320,40 +319,10 @@ function change(e, d) {
                     .style("stroke", "black")
                     .style("stroke-width", "2.5px")
                     .style("fill", function (d) {
-
-                        if (d.data.rankName === "realm") {
-                            return d._children ? "	#fff" : "#006600"
-                        } else if (d.data.rankName === "subrealm") {
-                            return d._children ? "	#fff" : "#006600"
-                        } else if (d.data.rankName === "kingdom") {
-                            return d._children ? "#fff" : "#278627";
-                        } else if (d.data.rankName === "subkingdom") {
-                            return d._children ? "#fff" : "#278627";
-                        } else if (d.data.rankName === "phylum") {
-                            return d._children ? "#fff" : "#00426D";
-                        } else if (d.data.rankName === "subphylum") {
-                            return d._children ? "#fff" : "#00426D";
-                        } else if (d.data.rankName === "class") {
-                            return d._children ? "#fff" : "#3D79AA";
-                        } else if (d.data.rankName === "subclass") {
-                            return d._children ? "#fff" : "#3D79AA";
-                        } else if (d.data.rankName === "order") {
-                            return d._children ? "#fff" : "#006CB5";
-                        } else if (d.data.rankName === "suborder") {
-                            return d._children ? "#fff" : "#006CB5";
-                        } else if (d.data.rankName === "family") {
-                            return d._children ? "#fff" : "#258DE4";
-                        } else if (d.data.rankName === "subfamily") {
-                            return d._children ? "#fff" : "#258DE4";
-                        } else if (d.data.rankName === "genus") {
-                            return d._children ? "#fff" : "#99D7FF";
-                        } else if (d.data.rankName === "subgenus") {
-                            return d._children ? "#fff" : "#99D7FF";
-                        }
-                        findParent(d)
-
+                        let color = getRankColor(!!d._children, d.data.rankName);                    
+                        if (!!color) { return color; }                    
+                        findParent(d);
                     })
-
                     .style("opacity", function (d) {
                         return !d.data.parentDistance ? 0 : 1;
                     })
@@ -387,7 +356,6 @@ function change(e, d) {
                             return d.children || d._children ? "start" : "end";
                         }
                     })
-
                     .style("font-size", "50px")
                     .style("font-weight", "bold")
                     .style("font-style", "italic")
@@ -466,39 +434,9 @@ function change(e, d) {
                         }
                     })
                     .style("fill", function (d) {
-
-
-                        if (d.data.rankName === "realm") {
-                            return d._children ? "	#fff" : "#006600"
-                        } else if (d.data.rankName === "subrealm") {
-                            return d._children ? "	#fff" : "#006600"
-                        } else if (d.data.rankName === "kingdom") {
-                            return d._children ? "#fff" : "#278627";
-                        } else if (d.data.rankName === "subkingdom") {
-                            return d._children ? "#fff" : "#278627";
-                        } else if (d.data.rankName === "phylum") {
-                            return d._children ? "#fff" : "#00426D";
-                        } else if (d.data.rankName === "subphylum") {
-                            return d._children ? "#fff" : "#00426D";
-                        } else if (d.data.rankName === "class") {
-                            return d._children ? "#fff" : "#3D79AA";
-                        } else if (d.data.rankName === "subclass") {
-                            return d._children ? "#fff" : "#3D79AA";
-                        } else if (d.data.rankName === "order") {
-                            return d._children ? "#fff" : "#006CB5";
-                        } else if (d.data.rankName === "suborder") {
-                            return d._children ? "#fff" : "#006CB5";
-                        } else if (d.data.rankName === "family") {
-                            return d._children ? "#fff" : "#258DE4";
-                        } else if (d.data.rankName === "subfamily") {
-                            return d._children ? "#fff" : "#258DE4";
-                        } else if (d.data.rankName === "genus") {
-                            return d._children ? "#fff" : "#99D7FF";
-                        } else if (d.data.rankName === "subgenus") {
-                            return d._children ? "#fff" : "#99D7FF";
-                        }
-                        findParent(d)
-
+                        let color = getRankColor(!!d._children, d.data.rankName);
+                        if (!!color) { return color; }
+                        findParent(d);
                     })
                     .attr('cursor', 'pointer');
 
@@ -512,38 +450,9 @@ function change(e, d) {
                         }
                     })
                     .style("fill", function (d) {
-
-                        if (d.data.rankName === "realm") {
-                            return d._children ? "	#fff" : "#006600"
-                        } else if (d.data.rankName === "subrealm") {
-                            return d._children ? "	#fff" : "#006600"
-                        } else if (d.data.rankName === "kingdom") {
-                            return d._children ? "#fff" : "#278627";
-                        } else if (d.data.rankName === "subkingdom") {
-                            return d._children ? "#fff" : "#278627";
-                        } else if (d.data.rankName === "phylum") {
-                            return d._children ? "#fff" : "#00426D";
-                        } else if (d.data.rankName === "subphylum") {
-                            return d._children ? "#fff" : "#00426D";
-                        } else if (d.data.rankName === "class") {
-                            return d._children ? "#fff" : "#3D79AA";
-                        } else if (d.data.rankName === "subclass") {
-                            return d._children ? "#fff" : "#3D79AA";
-                        } else if (d.data.rankName === "order") {
-                            return d._children ? "#fff" : "#006CB5";
-                        } else if (d.data.rankName === "suborder") {
-                            return d._children ? "#fff" : "#006CB5";
-                        } else if (d.data.rankName === "family") {
-                            return d._children ? "#fff" : "#258DE4";
-                        } else if (d.data.rankName === "subfamily") {
-                            return d._children ? "#fff" : "#258DE4";
-                        } else if (d.data.rankName === "genus") {
-                            return d._children ? "#fff" : "#99D7FF";
-                        } else if (d.data.rankName === "subgenus") {
-                            return d._children ? "#fff" : "#99D7FF";
-                        }
-                        findParent(d)
-
+                        let color = getRankColor(!!d._children, d.data.rankName);                    
+                        if (!!color) { return color; }
+                        findParent(d);
                     })
                     .attr('cursor', 'pointer')
                     .text(function (d, i) {
@@ -565,11 +474,10 @@ function change(e, d) {
                         if (d.data.rankName === 'genus' && genus == true) {
                             return "blue";
                         }
-
                         return "#000000";
                     });
-                Update.select('circle.node')
 
+                Update.select('circle.node')
                     .attr('r', function (d) {
                         if (d.data.name !== null) {
                             return "20px";
@@ -578,38 +486,11 @@ function change(e, d) {
                         }
                     })
                     .style("fill", function (d) {
-                        if (d.data.rankName === "realm") {
-                            return d._children ? "	#fff" : "#006600"
-                        } else if (d.data.rankName === "subrealm") {
-                            return d._children ? "	#fff" : "#006600"
-                        } else if (d.data.rankName === "kingdom") {
-                            return d._children ? "#fff" : "#278627";
-                        } else if (d.data.rankName === "subkingdom") {
-                            return d._children ? "#fff" : "#278627";
-                        } else if (d.data.rankName === "phylum") {
-                            return d._children ? "#fff" : "#00426D";
-                        } else if (d.data.rankName === "subphylum") {
-                            return d._children ? "#fff" : "#00426D";
-                        } else if (d.data.rankName === "class") {
-                            return d._children ? "#fff" : "#3D79AA";
-                        } else if (d.data.rankName === "subclass") {
-                            return d._children ? "#fff" : "#3D79AA";
-                        } else if (d.data.rankName === "order") {
-                            return d._children ? "#fff" : "#006CB5";
-                        } else if (d.data.rankName === "suborder") {
-                            return d._children ? "#fff" : "#006CB5";
-                        } else if (d.data.rankName === "family") {
-                            return d._children ? "#fff" : "#258DE4";
-                        } else if (d.data.rankName === "subfamily") {
-                            return d._children ? "#fff" : "#258DE4";
-                        } else if (d.data.rankName === "genus") {
-                            return d._children ? "#fff" : "#99D7FF";
-                        } else if (d.data.rankName === "subgenus") {
-                            return d._children ? "#fff" : "#99D7FF";
-                        }
-                        findParent(d)
-
+                        let color = getRankColor(!!d._children, d.data.rankName);
+                        if (!!color) { return color; }
+                        findParent(d);
                     })
+
                 Update.select('text.print')
 
                     .attr("transform", function (d, i) {
@@ -624,16 +505,7 @@ function change(e, d) {
 
                         }
                     })
-
-                    // .clone(true).lower()
-                    // .attr("stroke-linejoin", "round")
-                    // .attr("stroke-width", 10)
-                    // .attr("stroke", "white")
-
-
                     .style("fill", function (d) {
-
-
                         if (d.data.taxNodeID !== 'legend') {
                             if (selected == d.data.name) {
                                 return d._children ? "#000000" : "#006CB5"
@@ -643,10 +515,7 @@ function change(e, d) {
                             }
                         }
                         findParent(d)
-
                     })
-
-
                     .attr('cursor', 'pointer')
 
 
