@@ -1,139 +1,53 @@
 
-/* dmd 01/31/23 Formerly .container */
+
+/* The top-level container Element */
 #d3_taxonomy_vis_container {
-    width: available;
-    height: available;
+    height: 100%;
+    overflow: auto;
+    width: 100%;
 }
 
-#d3_taxonomy_vis_container .vanish span:hover {
-    background-color: #D1EDFF;
+/* The release panel */
+#d3_taxonomy_vis_container .release-panel {
+    width: 100%;
 }
-
-#d3_taxonomy_vis_container .vanish .h2 {
-    color: #99D7FF;
-}
-
-#d3_taxonomy_vis_container .vanish {
-    font-size: large;
-    font-style: italic;
-    color: #006600;
-
-    width: 3000px;
-    height: 2000px;
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    animation: fadeIn 3s;
-    -webkit-animation: fadeIn 3s;
-    -moz-animation: fadeIn 3s;
-    -o-animation: fadeIn 3s;
-    -ms-animation: fadeIn 3s;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-
-#d3_taxonomy_vis_container .h2 {
-    font-style: italic;
-    font-family: 'Poppins', sans-serif;
-    color: rgba(122, 202, 108, 0.63);
-}
-
-/*
-body {
-    width: available;
-    height: available;
-    overflow-x: hidden;
-}*/
-
-#d3_taxonomy_vis_container .space {
-    width: 15%;
-    height: available;
-    background-color: white;
-}
-
-#d3_taxonomy_vis_container .color {
-    background-color: white;
-    width: 65%;
-    float: left
-}
-
-#d3_taxonomy_vis_container .species {
-    overflow-x: hidden;
-    background-color: whitesmoke;
-    width: 25%;
-    float: right;
-}
-
-/*#test {
-    overflow-y: hidden;
-    overflow-x: hidden;
-}*/
-
-#d3_taxonomy_vis_container #dropdown {
-    width: 50%;
-}
-
-#d3_taxonomy_vis_container .selection {
-    width: 50%;
+#d3_taxonomy_vis_container .release-panel .release-control {
     border-radius: 10px;
 }
 
-#d3_taxonomy_vis_container h1 {
-    font-family: var(--mt-pff);
-    color: #008000;
-    background-color: hsl(0, 0%, 100%);
-    font-size: 75;
+#d3_taxonomy_vis_container .body-panel {
+    align-items: flex-start;
+    display: flex;
+    flex: 1 0 auto;
+    flex-flow: row nowrap;
+    height: 100vh;
+    justify-content: flex-start;
+    width: 100vw;
 }
 
+
+#d3_taxonomy_vis_container .taxonomy-panel {
+    height: 100%;
+    width: 70%;
+}
+
+#d3_taxonomy_vis_container .node-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: right;
+}
+#d3_taxonomy_vis_container .legend-node-text {
+    font-size: 0.9rem;
+    /*font-weight: bold;*/
+    font-style: normal;
+    text-align: right;
+    text-transform: capitalize;
+    transform: rotateY(0deg) rotate(-45deg);
+    transform-origin: left left; 
+}
+
+/* The tooltip */
 #d3_taxonomy_vis_container div.tooltip {
     position: absolute;
     width: auto;
@@ -144,24 +58,30 @@ body {
     border-radius: 8px;
 }
 
-#d3_taxonomy_vis_container .center {
-    text-align: center;
-}
 
-#d3_taxonomy_vis_container .light-bg {
-    background-color: whitesmoke;
-}
 
-#d3_taxonomy_vis_container .node-text {
-    font-size: 50pt;
+#d3_taxonomy_vis_container .species-panel {
+    background-color: #efefef;
+    height: 100%;
+    min-width: 300px;
+    padding: 15px;
+    width: 30%;
+}
+#d3_taxonomy_vis_container .species-panel .parent-name {
     font-weight: bold;
-    font-style: italic;
-    text-align: right;
+    margin-bottom: 1.0rem;
 }
-#d3_taxonomy_vis_container .legend-node-text {
-    font-size: 50pt;
-    /*font-weight: bold;*/
-    font-style: normal;
-    text-align: right;
+#d3_taxonomy_vis_container .species-panel .species-list {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
 }
-
+#d3_taxonomy_vis_container .species-panel .species-row {
+    color: blue;
+    margin-bottom: 0.5rem;
+}
+#d3_taxonomy_vis_container .species-panel .species-row:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

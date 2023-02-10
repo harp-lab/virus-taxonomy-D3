@@ -7,19 +7,23 @@
     <title>Virus Taxonomy</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
 </head>
 <body>
 <h1 class="center">Virus Taxonomy</h1>
 <div id="d3_taxonomy_vis_container">
-    <div class="color">
-        <div class="years"></div>
-        <div class="legend"></div>
+    <div class="release-panel">
+        <select class="release-ctrl"></select>
     </div>
-    <div class="space"></div>
-    <div class="species light-bg"></div>
+    <div class="body-panel">
+        <div class="taxonomy-panel"></div>
+        <div class="species-panel light-bg">
+            <div class="parent-name"></div>
+            <div class="species-list"></div>
+        </div>
+    </div>
 </div>
-<script src="js/script.js"></script>
+<script src="../js/script.js"></script>
 <script type="text/javascript">
 
     // All ICTV MSL releases
@@ -36,7 +40,7 @@
     // This runs when the DOM hierarchy has been fully constructed.
     document.addEventListener("DOMContentLoaded", function () {
 
-        const containerSelector = ".container";
+        const containerSelector = "#d3_taxonomy_vis_container";
         const dataURL = ".";
         const taxonDetailsURL = "https://ictv.global/taxonomy/taxondetails";
 
