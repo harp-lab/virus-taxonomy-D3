@@ -32,18 +32,18 @@
 }
 
 #d3_taxonomy_vis_container .node-text {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     font-weight: bold;
     font-style: italic;
     text-align: right;
 }
 #d3_taxonomy_vis_container .legend-node-text {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     /*font-weight: bold;*/
     font-style: normal;
     text-align: right;
     text-transform: capitalize;
-    transform: rotateY(0deg) rotate(-45deg);
+    /* transform: rotateY(0deg) rotate(-45deg); */
     transform-origin: left left; 
 }
 
@@ -56,14 +56,19 @@
     background: #f3f3ef;
     border: solid 1px #aaa;
     border-radius: 8px;
+    opacity: 0;
 }
 
-
+#d3_taxonomy_vis_container div.tooltip:hover{
+    opacity: 1;
+    transition-delay: 1000;
+    -moz-transition-delay: 1000;
+}
 
 #d3_taxonomy_vis_container .species-panel {
     background-color: #efefef;
     height: 100%;
-    min-width: 300px;
+    min-width: 250px;
     padding: 15px;
     width: 30%;
 }
@@ -74,6 +79,7 @@
 #d3_taxonomy_vis_container .species-panel .species-list {
     align-items: flex-start;
     display: flex;
+    font-style: italic;
     flex-flow: column nowrap;
     justify-content: flex-start;
 }
