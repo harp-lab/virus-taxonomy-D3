@@ -28,7 +28,7 @@
 
 #d3_taxonomy_vis_container .taxonomy-panel {
     height: 100%;
-    width: 70%;
+    width: 80%;
 }
 
 #d3_taxonomy_vis_container .node-text {
@@ -59,6 +59,7 @@
     opacity: 0;
 }
 
+
 #d3_taxonomy_vis_container div.tooltip:hover{
     opacity: 1;
     transition-delay: 1000;
@@ -69,8 +70,8 @@
     background-color: #efefef;
     height: 100%;
     min-width: 250px;
-    padding: 15px;
-    width: 30%;
+    padding: 2px;
+    width: 20%;
 }
 #d3_taxonomy_vis_container .species-panel .parent-name {
     font-weight: bold;
