@@ -718,7 +718,7 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
                         .attr("x", function (d, i) {
                             if (d.data.rankIndex === 0) {
                                 return d.children || d._children ? 10 : -10;
-                            } else if (d.data.has_species !==0) {
+                            } else if (d.data.has_species !==0 && d.data.taxNodeID!=="legend") {
                                 return d.children || d._children ? -10 : 10;
                             }
                         })
@@ -726,7 +726,7 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
                             if (d.data.rankIndex === 0) {
                                 return d.children || d._children ? "start" : "end";
                             }
-                            else if (d.data.has_species !==0) {
+                            else if (d.data.has_species !==0 && d.data.taxNodeID!=="legend") {
                                 return d.children || d._children ? "end" : "start";
                             }
                         })
@@ -923,13 +923,13 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
                     Update.select("text.legend-node-text")
                         .attr("transform", function (d, i) {
                             if ((d.data.taxNodeID === "legend") ) {
-                               // return "rotate(-45 150,-100)";
-                                if (d.data.rankIndex !== (rankCount-1)) {
-                                    return  "rotate(-45 100,-100)";
-                                }
-                                else if (d.data.rankIndex === (rankCount-1)) {
-                                    return "rotate(-45 0,-300)";
-                                }
+                               return "rotate(-45 150,-100)";
+                                // if (d.data.rankIndex !== (rankCount-1)) {
+                                //     return  "rotate(-45 100,-100)";
+                                // }
+                                // else if (d.data.rankIndex === (rankCount-1)) {
+                                //     return "rotate(-45 0,-300)";
+                                // }
                                 
                             }
                         })
