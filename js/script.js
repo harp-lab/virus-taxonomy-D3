@@ -587,7 +587,7 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
                     //  }
                     //    else{
                      
-                        d.x = d.x * h;
+                        d.x = d.x * h*2;
                         d.y = d.depth *w;
                       // }
                     // }
