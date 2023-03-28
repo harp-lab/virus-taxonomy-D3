@@ -1,1 +1,2171 @@
-{"child_counts":"29 families, 8 subfamilies, 93 genera, 1091 species","has_assigned_siblings":false,"has_species":0,"is_assigned":true,"has_unassigned_siblings":false,"name":"1981","parentDistance":0,"rankIndex":0,"rankName":"tree","taxNodeID":19810000,"children":[{"child_counts":null,"has_assigned_siblings":false,"has_species":false,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":"legend","children":[{"child_counts":null,"has_assigned_siblings":false,"has_species":false,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":"legend","children":[{"child_counts":null,"has_assigned_siblings":false,"has_species":false,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":"legend","children":[{"child_counts":null,"has_assigned_siblings":false,"has_species":false,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":4,"rankName":"species","taxNodeID":"legend","children":[]}]}]}]},{"child_counts":"2 genera, 70 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Adenoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810002,"children":[{"child_counts":"2 genera, 70 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"14 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Aviadenovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810067,"children":null},{"child_counts":"56 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Mastadenovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810068,"children":null}]}]},{"child_counts":"1 genus, 10 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Arenaviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810003,"children":[{"child_counts":"1 genus, 10 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"10 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Arenavirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810069,"children":null}]}]},{"child_counts":"1 genus, 5 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Baculoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810004,"children":[{"child_counts":"1 genus, 5 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"5 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Baculovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810070,"children":null}]}]},{"child_counts":"4 genera, 162 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Bunyaviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810005,"children":[{"child_counts":"4 genera, 162 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"93 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Bunyavirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810071,"children":null},{"child_counts":"18 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Nairovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810072,"children":null},{"child_counts":"27 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Phlebovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810073,"children":null},{"child_counts":"5 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Uukuvirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810075,"children":null},{"child_counts":"4 genera, 162 species","has_assigned_siblings":true,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":null,"children":null}]}]},{"child_counts":"1 genus, 3 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Caliciviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810006,"children":[{"child_counts":"1 genus, 3 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"3 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Calicivirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810076,"children":null}]}]},{"child_counts":"1 genus, 5 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Coronaviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810007,"children":[{"child_counts":"1 genus, 5 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"5 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Coronavirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810077,"children":null}]}]},{"child_counts":"1 genus, 1 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Corticoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810008,"children":[{"child_counts":"1 genus, 1 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"1 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Corticovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810078,"children":null}]}]},{"child_counts":"1 genus, 1 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Cystoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810009,"children":[{"child_counts":"1 genus, 1 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"1 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Cystovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810079,"children":null}]}]},{"child_counts":"3 subfamilies, 5 genera, 8 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Herpesviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810010,"children":[{"child_counts":"2 genera, 5 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":false,"name":"Alphaherpesvirinae","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":19810040,"children":[{"child_counts":"3 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Unnamed genus 1","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810080,"children":null},{"child_counts":"2 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Unnamed genus 2","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810081,"children":null}]},{"child_counts":"2 genera, 2 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":false,"name":"Betaherpesvirinae","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":19810041,"children":[{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Human cytomegalovirus group","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810082,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Murine herpesvirus group","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810083,"children":null}]},{"child_counts":"1 genus, 1 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":false,"name":"Gammaherpesvirinae","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":19810042,"children":[{"child_counts":"1 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Unnamed genus 3","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810084,"children":null}]}]},{"child_counts":"2 genera, 6 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Inoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810011,"children":[{"child_counts":"2 genera, 6 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Inovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810085,"children":null},{"child_counts":"5 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Plectrovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810086,"children":null}]}]},{"child_counts":"5 genera, 35 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Iridoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810012,"children":[{"child_counts":"5 genera, 35 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"African swine fever virus group","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810087,"children":null},{"child_counts":"10 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Chloriridovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810088,"children":null},{"child_counts":"22 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Iridovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810089,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Lymphocystis disease virus group","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810090,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Ranavirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810091,"children":null}]}]},{"child_counts":"1 genus, 27 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Leviviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810013,"children":[{"child_counts":"1 genus, 27 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"27 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Levivirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810092,"children":null}]}]},{"child_counts":"1 genus, 24 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Microviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810014,"children":[{"child_counts":"1 genus, 24 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"24 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Microvirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810093,"children":null}]}]},{"child_counts":"1 genus, 16 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Myoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810015,"children":[{"child_counts":"1 genus, 16 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"16 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"T-even phage group","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810094,"children":null}]}]},{"child_counts":"1 genus, 1 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Nodaviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810016,"children":[{"child_counts":"1 genus, 1 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"1 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Nodavirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810095,"children":null}]}]},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Nudaurelia beta virus group","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810017,"children":[{"child_counts":"1 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"1 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":null,"children":null}]}]},{"child_counts":"1 genus, 3 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Orthomyxoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810018,"children":[{"child_counts":"1 genus, 3 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"2 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Influenzavirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810097,"children":null},{"child_counts":"1 genus, 3 species","has_assigned_siblings":true,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":null,"children":null}]}]},{"child_counts":"2 genera, 16 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Papovaviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810019,"children":[{"child_counts":"2 genera, 16 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"9 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Papillomavirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810099,"children":null},{"child_counts":"7 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Polyomavirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810100,"children":null}]}]},{"child_counts":"3 genera, 19 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Paramyxoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810020,"children":[{"child_counts":"3 genera, 19 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"4 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Morbillivirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810101,"children":null},{"child_counts":"12 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Paramyxovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810102,"children":null},{"child_counts":"3 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Pneumovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810103,"children":null}]}]},{"child_counts":"3 genera, 19 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Parvoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810021,"children":[{"child_counts":"3 genera, 19 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"2 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Densovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810104,"children":null},{"child_counts":"5 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Dependovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810105,"children":null},{"child_counts":"12 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Parvovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810106,"children":null}]}]},{"child_counts":"4 genera, 224 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Picornaviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810022,"children":[{"child_counts":"4 genera, 224 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"7 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Aphthovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810107,"children":null},{"child_counts":"2 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Cardiovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810108,"children":null},{"child_counts":"97 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Enterovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810109,"children":null},{"child_counts":"116 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Rhinovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810110,"children":null},{"child_counts":"4 genera, 224 species","has_assigned_siblings":true,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":null,"children":null}]}]},{"child_counts":"1 genus, 2 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Plasmaviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810023,"children":[{"child_counts":"1 genus, 2 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"2 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Plasmavirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810112,"children":null}]}]},{"child_counts":"1 genus, 9 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Podoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810024,"children":[{"child_counts":"1 genus, 9 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"9 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"T7 phage group","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810113,"children":null}]}]},{"child_counts":"2 subfamilies, 7 genera, 58 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Poxviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810025,"children":[{"child_counts":"6 genera, 34 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Chordopoxvirinae","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":19810057,"children":[{"child_counts":"8 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Avipoxvirus","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810114,"children":null},{"child_counts":"3 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Capripoxvirus","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810115,"children":null},{"child_counts":"4 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Leporipoxvirus","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810116,"children":null},{"child_counts":"8 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Orthopoxvirus","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810117,"children":null},{"child_counts":"4 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Parapoxvirus","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810118,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Suipoxvirus","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810119,"children":null},{"child_counts":"6 genera, 34 species","has_assigned_siblings":true,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":null,"children":null}]},{"child_counts":"1 genus, 24 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":false,"name":"Entomopoxvirinae","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":19810058,"children":[{"child_counts":"24 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Entomopoxvirus","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810121,"children":null}]}]},{"child_counts":"6 genera, 50 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Reoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810026,"children":[{"child_counts":"6 genera, 50 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"12 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Cytoplasmic polyhedrosis virus group","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810122,"children":null},{"child_counts":"8 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Fijivirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810123,"children":null},{"child_counts":"17 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Orbivirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810124,"children":null},{"child_counts":"2 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Phytoreovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810125,"children":null},{"child_counts":"10 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Reovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810126,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Rotavirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810127,"children":null}]}]},{"child_counts":"3 subfamilies, 2 genera, 20 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Retroviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810027,"children":[{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Lentivirinae","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":19810060,"children":[{"child_counts":"1 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":null,"children":null}]},{"child_counts":"2 genera, 15 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Oncovirinae","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":19810061,"children":[{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Type B oncovirus group","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810129,"children":null},{"child_counts":"13 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Type C oncovirus group","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":19810130,"children":null},{"child_counts":"2 genera, 15 species","has_assigned_siblings":true,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":null,"children":null}]},{"child_counts":"4 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Spumavirinae","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":19810062,"children":[{"child_counts":"4 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":null,"children":null}]}]},{"child_counts":"3 genera, 23 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Rhabdoviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810028,"children":[{"child_counts":"3 genera, 23 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"6 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Lyssavirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810133,"children":null},{"child_counts":"8 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Plant rhabdovirus group","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810134,"children":null},{"child_counts":"8 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":true,"name":"Vesiculovirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810136,"children":null},{"child_counts":"3 genera, 23 species","has_assigned_siblings":true,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":3,"rankName":"genus","taxNodeID":null,"children":null}]}]},{"child_counts":"1 genus, 7 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Tectiviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810029,"children":[{"child_counts":"1 genus, 7 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"7 species","has_assigned_siblings":false,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Tectivirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810137,"children":null}]}]},{"child_counts":"4 genera, 83 species","has_assigned_siblings":true,"has_species":0,"is_assigned":true,"has_unassigned_siblings":true,"name":"Togaviridae","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":19810030,"children":[{"child_counts":"4 genera, 83 species","has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"22 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Alphavirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810138,"children":null},{"child_counts":"57 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Flavivirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810139,"children":null},{"child_counts":"3 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Pestivirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810140,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Rubivirus","parentDistance":2,"rankIndex":3,"rankName":"genus","taxNodeID":19810141,"children":null}]}]},{"child_counts":null,"has_assigned_siblings":true,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":1,"rankName":"family","taxNodeID":null,"children":[{"child_counts":null,"has_assigned_siblings":false,"has_species":0,"is_assigned":false,"has_unassigned_siblings":false,"name":"Unassigned","parentDistance":1,"rankIndex":2,"rankName":"subfamily","taxNodeID":null,"children":[{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Alfalfa mosaic virus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810142,"children":null},{"child_counts":"3 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Bromovirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810143,"children":null},{"child_counts":"15 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Carlavirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810144,"children":null},{"child_counts":"3 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Caulimovirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810145,"children":null},{"child_counts":"8 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Closterovirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810146,"children":null},{"child_counts":"11 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Comovirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810147,"children":null},{"child_counts":"3 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Cucumovirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810148,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Dianthovirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810149,"children":null},{"child_counts":"4 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Geminivirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810150,"children":null},{"child_counts":"3 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Hordeivirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810151,"children":null},{"child_counts":"14 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Ilarvirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810152,"children":null},{"child_counts":"4 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Lambda phage group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810153,"children":null},{"child_counts":"10 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Luteovirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810154,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Maize chlorotic dwarf virus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810155,"children":null},{"child_counts":"14 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Nepovirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810156,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Pea enation mosaic virus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810157,"children":null},{"child_counts":"3 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Penicillium chrysogenum virus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810158,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Penicillium stoloniferum PsV-S group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810159,"children":null},{"child_counts":"12 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Potexvirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810160,"children":null},{"child_counts":"35 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Potyvirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810161,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Sobemovirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810162,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Tobacco necrosis virus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810163,"children":null},{"child_counts":"10 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Tobamovirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810164,"children":null},{"child_counts":"2 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Tobravirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810165,"children":null},{"child_counts":"1 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Tomato spotted wilt virus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810166,"children":null},{"child_counts":"5 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Tombusvirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810167,"children":null},{"child_counts":"16 species","has_assigned_siblings":true,"has_species":1,"is_assigned":true,"has_unassigned_siblings":false,"name":"Tymovirus group","parentDistance":3,"rankIndex":3,"rankName":"genus","taxNodeID":19810168,"children":null}]}]}]}
+{
+    "child_counts": "29 families, 8 subfamilies, 93 genera, 1091 species",
+    "has_assigned_siblings": false,
+    "has_species": 0,
+    "is_assigned": true,
+    "has_unassigned_siblings": false,
+    "name": "1981",
+    "parentDistance": 0,
+    "rankIndex": 0,
+    "rankName": "tree",
+    "taxNodeID": 19810000,
+    "children": [
+        {
+            "child_counts": null,
+            "has_assigned_siblings": false,
+            "has_species": false,
+            "is_assigned": false,
+            "has_unassigned_siblings": false,
+            "name": "Unassigned",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": "legend",
+            "children": [
+                {
+                    "child_counts": null,
+                    "has_assigned_siblings": false,
+                    "has_species": false,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": "legend",
+                    "children": [
+                        {
+                            "child_counts": null,
+                            "has_assigned_siblings": false,
+                            "has_species": false,
+                            "is_assigned": false,
+                            "has_unassigned_siblings": false,
+                            "name": "Unassigned",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": "legend",
+                            "children": [
+                                {
+                                    "child_counts": null,
+                                    "has_assigned_siblings": false,
+                                    "has_species": false,
+                                    "is_assigned": false,
+                                    "has_unassigned_siblings": false,
+                                    "name": "Unassigned",
+                                    "parentDistance": 1,
+                                    "rankIndex": 4,
+                                    "rankName": "species",
+                                    "taxNodeID": "legend",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "2 genera, 70 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Adenoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810002,
+            "children": [
+                {
+                    "child_counts": "2 genera, 70 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "14 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Aviadenovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810067,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "56 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Mastadenovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810068,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 10 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Arenaviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810003,
+            "children": [
+                {
+                    "child_counts": "1 genus, 10 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "10 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Arenavirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810069,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 5 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Baculoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810004,
+            "children": [
+                {
+                    "child_counts": "1 genus, 5 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "5 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Baculovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810070,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "4 genera, 162 species",
+            "has_assigned_siblings": true,
+            "has_species": 1,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Bunyaviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810005,
+            "children": [
+                {
+                    "child_counts": "4 genera, 162 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "93 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Bunyavirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810071,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "18 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Nairovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810072,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "27 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Phlebovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810073,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "5 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Uukuvirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810075,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 3 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Caliciviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810006,
+            "children": [
+                {
+                    "child_counts": "1 genus, 3 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "3 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Calicivirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810076,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 5 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Coronaviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810007,
+            "children": [
+                {
+                    "child_counts": "1 genus, 5 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "5 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Coronavirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810077,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 1 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Corticoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810008,
+            "children": [
+                {
+                    "child_counts": "1 genus, 1 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Corticovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810078,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 1 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Cystoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810009,
+            "children": [
+                {
+                    "child_counts": "1 genus, 1 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Cystovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810079,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "3 subfamilies, 5 genera, 8 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Herpesviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810010,
+            "children": [
+                {
+                    "child_counts": "2 genera, 5 species",
+                    "has_assigned_siblings": true,
+                    "has_species": 0,
+                    "is_assigned": true,
+                    "has_unassigned_siblings": false,
+                    "name": "Alphaherpesvirinae",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": 19810040,
+                    "children": [
+                        {
+                            "child_counts": "3 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Unnamed genus 1",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810080,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "2 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Unnamed genus 2",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810081,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "child_counts": "2 genera, 2 species",
+                    "has_assigned_siblings": true,
+                    "has_species": 0,
+                    "is_assigned": true,
+                    "has_unassigned_siblings": false,
+                    "name": "Betaherpesvirinae",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": 19810041,
+                    "children": [
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Human cytomegalovirus group",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810082,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Murine herpesvirus group",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810083,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "child_counts": "1 genus, 1 species",
+                    "has_assigned_siblings": true,
+                    "has_species": 0,
+                    "is_assigned": true,
+                    "has_unassigned_siblings": false,
+                    "name": "Gammaherpesvirinae",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": 19810042,
+                    "children": [
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Unnamed genus 3",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810084,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "2 genera, 6 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Inoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810011,
+            "children": [
+                {
+                    "child_counts": "2 genera, 6 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Inovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810085,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "5 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Plectrovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810086,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "5 genera, 35 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Iridoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810012,
+            "children": [
+                {
+                    "child_counts": "5 genera, 35 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "African swine fever virus group",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810087,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "10 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Chloriridovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810088,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "22 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Iridovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810089,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Lymphocystis disease virus group",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810090,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Ranavirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810091,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 27 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Leviviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810013,
+            "children": [
+                {
+                    "child_counts": "1 genus, 27 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "27 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Levivirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810092,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 24 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Microviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810014,
+            "children": [
+                {
+                    "child_counts": "1 genus, 24 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "24 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Microvirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810093,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 16 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Myoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810015,
+            "children": [
+                {
+                    "child_counts": "1 genus, 16 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "16 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "T-even phage group",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810094,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 1 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Nodaviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810016,
+            "children": [
+                {
+                    "child_counts": "1 genus, 1 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Nodavirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810095,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 species",
+            "has_assigned_siblings": true,
+            "has_species": 1,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Nudaurelia beta virus group",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810017,
+            "children": null
+        },
+        {
+            "child_counts": "1 genus, 3 species",
+            "has_assigned_siblings": true,
+            "has_species": 1,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Orthomyxoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810018,
+            "children": [
+                {
+                    "child_counts": "1 genus, 3 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "2 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Influenzavirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810097,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "2 genera, 16 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Papovaviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810019,
+            "children": [
+                {
+                    "child_counts": "2 genera, 16 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "9 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Papillomavirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810099,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "7 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Polyomavirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810100,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "3 genera, 19 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Paramyxoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810020,
+            "children": [
+                {
+                    "child_counts": "3 genera, 19 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "4 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Morbillivirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810101,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "12 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Paramyxovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810102,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "3 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Pneumovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810103,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "3 genera, 19 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Parvoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810021,
+            "children": [
+                {
+                    "child_counts": "3 genera, 19 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "2 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Densovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810104,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "5 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Dependovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810105,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "12 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Parvovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810106,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "4 genera, 224 species",
+            "has_assigned_siblings": true,
+            "has_species": 1,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Picornaviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810022,
+            "children": [
+                {
+                    "child_counts": "4 genera, 224 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "7 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Aphthovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810107,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "2 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Cardiovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810108,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "97 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Enterovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810109,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "116 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Rhinovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810110,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 2 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Plasmaviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810023,
+            "children": [
+                {
+                    "child_counts": "1 genus, 2 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "2 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Plasmavirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810112,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 9 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Podoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810024,
+            "children": [
+                {
+                    "child_counts": "1 genus, 9 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "9 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "T7 phage group",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810113,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "2 subfamilies, 7 genera, 58 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Poxviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810025,
+            "children": [
+                {
+                    "child_counts": "6 genera, 34 species",
+                    "has_assigned_siblings": true,
+                    "has_species": 1,
+                    "is_assigned": true,
+                    "has_unassigned_siblings": false,
+                    "name": "Chordopoxvirinae",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": 19810057,
+                    "children": [
+                        {
+                            "child_counts": "8 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Avipoxvirus",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810114,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "3 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Capripoxvirus",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810115,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "4 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Leporipoxvirus",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810116,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "8 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Orthopoxvirus",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810117,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "4 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Parapoxvirus",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810118,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Suipoxvirus",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810119,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "child_counts": "1 genus, 24 species",
+                    "has_assigned_siblings": true,
+                    "has_species": 0,
+                    "is_assigned": true,
+                    "has_unassigned_siblings": false,
+                    "name": "Entomopoxvirinae",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": 19810058,
+                    "children": [
+                        {
+                            "child_counts": "24 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Entomopoxvirus",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810121,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "6 genera, 50 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Reoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810026,
+            "children": [
+                {
+                    "child_counts": "6 genera, 50 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "12 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Cytoplasmic polyhedrosis virus group",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810122,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "8 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Fijivirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810123,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "17 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Orbivirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810124,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "2 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Phytoreovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810125,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "10 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Reovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810126,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Rotavirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810127,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "3 subfamilies, 2 genera, 20 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Retroviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810027,
+            "children": [
+                {
+                    "child_counts": "1 species",
+                    "has_assigned_siblings": true,
+                    "has_species": 1,
+                    "is_assigned": true,
+                    "has_unassigned_siblings": false,
+                    "name": "Lentivirinae",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": 19810060,
+                    "children": null
+                },
+                {
+                    "child_counts": "2 genera, 15 species",
+                    "has_assigned_siblings": true,
+                    "has_species": 1,
+                    "is_assigned": true,
+                    "has_unassigned_siblings": false,
+                    "name": "Oncovirinae",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": 19810061,
+                    "children": [
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Type B oncovirus group",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810129,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "13 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Type C oncovirus group",
+                            "parentDistance": 1,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810130,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "child_counts": "4 species",
+                    "has_assigned_siblings": true,
+                    "has_species": 1,
+                    "is_assigned": true,
+                    "has_unassigned_siblings": false,
+                    "name": "Spumavirinae",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": 19810062,
+                    "children": null
+                }
+            ]
+        },
+        {
+            "child_counts": "3 genera, 23 species",
+            "has_assigned_siblings": true,
+            "has_species": 1,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Rhabdoviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810028,
+            "children": [
+                {
+                    "child_counts": "3 genera, 23 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "6 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Lyssavirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810133,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "8 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Plant rhabdovirus group",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810134,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "8 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Vesiculovirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810136,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "1 genus, 7 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Tectiviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810029,
+            "children": [
+                {
+                    "child_counts": "1 genus, 7 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "7 species",
+                            "has_assigned_siblings": false,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Tectivirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810137,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": "4 genera, 83 species",
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": true,
+            "has_unassigned_siblings": true,
+            "name": "Togaviridae",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": 19810030,
+            "children": [
+                {
+                    "child_counts": "4 genera, 83 species",
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "22 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Alphavirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810138,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "57 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Flavivirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810139,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "3 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Pestivirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810140,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Rubivirus",
+                            "parentDistance": 2,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810141,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "child_counts": null,
+            "has_assigned_siblings": true,
+            "has_species": 0,
+            "is_assigned": false,
+            "has_unassigned_siblings": false,
+            "name": "Unassigned",
+            "parentDistance": 1,
+            "rankIndex": 1,
+            "rankName": "family",
+            "taxNodeID": null,
+            "children": [
+                {
+                    "child_counts": null,
+                    "has_assigned_siblings": false,
+                    "has_species": 0,
+                    "is_assigned": false,
+                    "has_unassigned_siblings": false,
+                    "name": "Unassigned",
+                    "parentDistance": 1,
+                    "rankIndex": 2,
+                    "rankName": "subfamily",
+                    "taxNodeID": null,
+                    "children": [
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Alfalfa mosaic virus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810142,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "3 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Bromovirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810143,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "15 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Carlavirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810144,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "3 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Caulimovirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810145,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "8 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Closterovirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810146,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "11 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Comovirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810147,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "3 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Cucumovirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810148,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Dianthovirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810149,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "4 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Geminivirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810150,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "3 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Hordeivirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810151,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "14 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Ilarvirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810152,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "4 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Lambda phage group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810153,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "10 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Luteovirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810154,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Maize chlorotic dwarf virus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810155,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "14 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Nepovirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810156,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Pea enation mosaic virus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810157,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "3 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Penicillium chrysogenum virus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810158,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Penicillium stoloniferum PsV-S group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810159,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "12 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Potexvirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810160,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "35 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Potyvirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810161,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Sobemovirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810162,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Tobacco necrosis virus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810163,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "10 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Tobamovirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810164,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "2 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Tobravirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810165,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "1 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Tomato spotted wilt virus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810166,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "5 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Tombusvirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810167,
+                            "children": null
+                        },
+                        {
+                            "child_counts": "16 species",
+                            "has_assigned_siblings": true,
+                            "has_species": 1,
+                            "is_assigned": true,
+                            "has_unassigned_siblings": false,
+                            "name": "Tymovirus group",
+                            "parentDistance": 3,
+                            "rankIndex": 3,
+                            "rankName": "genus",
+                            "taxNodeID": 19810168,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
