@@ -587,7 +587,7 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
                     //  }
                     //    else{
                      
-                        d.x = d.x * h*2;
+                        d.x = d.x * h;
                         d.y = d.depth *w;
                       // }
                     // }
@@ -921,7 +921,7 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
                     Update.select("text.legend-node-text")
                         .attr("transform", function (d, i) {
                             if ((d.data.taxNodeID === "legend") ) {
-                               return "rotate(-45 170,-110)";
+                               return "rotate(-45 0,-100)";
                                 // if (d.data.rankIndex !== (rankCount-1)) {
                                 //     return  "rotate(-45 100,-100)";
                                 // }
