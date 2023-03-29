@@ -52,12 +52,12 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
         var selected;
     var num_flag=false;
     var num;
+    var check;
     // var dx=0;
     var arr=[];
     var temp=0;
     var rankYear=0;
-    var check=true;
-    var Flag = false;
+    var Flag = true;
     var max=0;
     var fs=0;
     // This will be populated with a release's species data.
@@ -79,6 +79,7 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
         //  }
         // if (!speciesArray) { throw new Error(`Invalid species array for taxnodeID ${parentTaxNodeID}`); }
         const speciesPanelEl = document.querySelector(`${containerSelector} .species-panel`);
+
         if (!speciesPanelEl) { throw new Error("Invalid species panel element"); }
         const nameEl = speciesPanelEl.querySelector(".parent-name");
         
@@ -89,7 +90,6 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
           species_flag=true;
         }
         // Populate the parent name panel.
-        else{
             console.log(speciesArray);
             if (hasSpecies){
                 nameEl.innerHTML = `Species of ${parentRank} ${parentName}`;
@@ -98,13 +98,10 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
                       nameEl.innerHTML = "";
 
                     }
-
         const listEl = speciesPanelEl.querySelector(".species-list");
         if (!listEl) { throw new Error("Invalid species list element"); }
         listEl.innerHTML = "";
-                    if(species_flag===false){
-
-                    
+                    if(species_flag===false){                   
         speciesArray.forEach(function(species) {
 
             const speciesEl = document.createElement("div");
@@ -128,11 +125,9 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
         speciesEl.className = "species-row";
         speciesEl.innerHTML = "";
 
-      }
-    
-    
-
-        }
+      
+    }
+        
     }
 
     // Return the color associated with this rank name and whether or not the node has child nodes.
@@ -178,9 +173,9 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
             // console.log(releases_[i].year);
         if (!releases_) { throw new Error("Invalid releases in initializeReleaseControl"); }
         
-        // const speciesPanelEl = document.querySelector(`${containerSelector} .species-panel`);
-        // if (!speciesPanelEl) { throw new Error("Invalid species panel element"); }
-
+         const speciesPanelEl = document.querySelector(`${containerSelector} .species-panel`);
+         if (!speciesPanelEl) { throw new Error("Invalid species panel element"); }
+         
         const controlEl = document.querySelector(`${containerSelector} .release-panel .release-ctrl`);
         if (!controlEl) { throw new Error("Invalid release control"); }
 
@@ -192,16 +187,16 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
             const option = document.createElement("option");
             option.text = release.year;
             option.value = isNaN(parseInt(release.year.substr(0,2))) ? "2022" : release.year;
-            
-            controlEl.appendChild(option);
-
-            
+            controlEl.appendChild(option);                       
         })
 
     // Add a "change" event handler
     
         controlEl.addEventListener("change", function (e) {
+            speciesPanelEl.querySelector(".parent-name").innerHTML="";
+            speciesPanelEl.querySelector(".species-list").innerHTML="";
             displayReleaseTaxonomy(e.target.value);
+
         
         })
         // speciesPanelEl.addEventListener("change", function(e) {
@@ -215,10 +210,11 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
 
     // Display the taxonomy tree for the release selected by the user.
     async function displayReleaseTaxonomy(release_) {
+        check=rankYear;
         //fetching the rankCont
-        
         for(let i=0;i<releases_.length;i++){
             if(releases_[i].year==release_){
+               
                 var rankCount=releases_[i].rankCount;
                 rankYear=releases_[i].year;
                 console.log("RANK",rankYear);
@@ -228,13 +224,10 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
                 Flag=false;
                 num_flag=false;
                 max=0;
-                check=false;
                 break;
                
             }
         }
-       
-
         console.log("rankCount : ",rankCount);
         // Validate the release parameter. If the first 2 characters are numeric, we will assume it's valid.
         if (!release_ || isNaN(parseInt(release_.substr(0,2)))) { throw new Error("Invalid release in displayReleaseTaxonomy"); }
@@ -242,8 +235,10 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
         // If there's already an SVG element in the taxonomy panel, delete it.
         let existingSVG = document.querySelector(`${containerSelector} .taxonomy-panel svg `);
         if (!!existingSVG) { existingSVG.remove(); }
-        
-        
+        // let exisitngSpecies=document.querySelector(`${containerSelector} .species-panel svg `);
+        // if(exisitngSpecies){
+        //     exisitngSpecies.innerHTML="";
+        // }
 
         // Determine the filenames for the non-species and species JSON files.
         const nonSpeciesFilename = `${dataURL}/data/nonSpecies_${release_}.json`;
@@ -251,7 +246,7 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
 
         // Load the species data for this release.
         speciesData = await d3.json(speciesFilename).then(function (s) {
-            
+            // document.querySelector(`${containerSelector} .species-panel`).innerHTML="";
             return s;
            
         });
@@ -755,8 +750,7 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
                         // })
                         .on('click', function (e, d) {
                              console.log("in click d = ",d,num)
-                             Flag = true;
-                             check=rankYear;
+                            //  check=rankYear;
                             return displaySpecies(d.data.name, d.data.rankName,d.data.has_species,check,d.data.taxNodeID,release_); 
                          
                           
@@ -921,7 +915,7 @@ window.ICTV.d3TaxonomyVisualization = function(containerSelector_, dataURL_, rel
                     Update.select("text.legend-node-text")
                         .attr("transform", function (d, i) {
                             if ((d.data.taxNodeID === "legend") ) {
-                               return "rotate(-45 0,-100)";
+                               return "rotate(-45 170,-110)";
                                 // if (d.data.rankIndex !== (rankCount-1)) {
                                 //     return  "rotate(-45 100,-100)";
                                 // }
