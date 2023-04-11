@@ -392,14 +392,6 @@ window.ICTV.d3TaxonomyVisualization = function (
       }
 
 
-  //     slider
-  //     .on('input', function(e) {
-  //       console.log("FONTSLIDER");
-  //     var fontSize = e.target.value;
-  //   Enter.style('font-size', fontSize + 'px');
-   
-  // });
-
       // TODO: Consider renaming "ds" to "root"
       const ds = d3.hierarchy(data, function (d) {
         if (d.children === null) {
@@ -437,6 +429,18 @@ window.ICTV.d3TaxonomyVisualization = function (
       });
 
       // Create and populate the tree structure.
+      slider
+      .on('input', function(e) {
+      const fontSize = e.target.value;
+      // console.log("FONT_SIZE",(e.target.value/2));
+      const r=(e.target.value)
+      console.log("FONT",fontSize);
+      font="";
+      font=fontSize + 'rem';
+      console.log("FOnt",font);
+      d3.selectAll("text")
+      .style("font-size", font );
+      });
       createTree(ds);
       slider.style("display","block");
       Text.style("display","block");
@@ -770,20 +774,6 @@ window.ICTV.d3TaxonomyVisualization = function (
             .style("pointer-events", function (d, i) {
               return !d.data.parentDistance ? "none" : "all";
             });
-           
-
-            
-      //   slider.on("input", function() {
-      //     // get the current value of the sliders
-      //     var value = this.value;
-      //     // set the scaling factor of the zoom behavior
-      //     // var font_size=value+"rem";
-      //     console.log("FONT_SIZE",value);
-      //    Enter.style("font-size",value);
-
-      // });
-
-
           function getBB(ds) {
             ds.each(function (d) {
               d.bbox = this.getBBox();
@@ -852,6 +842,7 @@ window.ICTV.d3TaxonomyVisualization = function (
 
             // })
             .on("click", function (e, d) {
+              slider.attr("value",4);
               console.log("in click d = ", d, num);
               //  check=rankYear;
               return displaySpecies(
@@ -864,44 +855,6 @@ window.ICTV.d3TaxonomyVisualization = function (
               );
             })
             .call(getBB);
-            // var children = svg.selectAll("g.node")
-
-                  slider
-                .on('input', function(e) {
-                const fontSize = e.target.value;
-                // console.log("FONT_SIZE",(e.target.value/2));
-                const r=(e.target.value)
-                console.log("FONT",fontSize);
-                var font=fontSize + 'rem';
-                console.log("FOnt",font);
-                Enter.select(".node-text").style('font-size', font);
-                Enter.select(".legend-node-text").style('font-size', font);
-                // Enter .select("circle.node")  .attr("r", function (d) {
-                //   if (d.data.name !== "Unassigned") {
-                //     return (settings.node.radius+r);
-                //   } else {
-                //     return 0;
-                //   }
-                // });
-                // Update.select("circle.node")
-                // .attr("r", function (d) {
-                //   if (d.data.name !== "Unassigned") {
-                //     return settings.node.radius+r;
-                //   } else {
-                //     return 0;
-                //   }
-                // })
-                });
-
-            
-
-        //  d3.select(".slider")
-        //       .on('input', function(e) {
-        //         // console.log("FONTSLIDER");
-        //       var fontSize = slider(this.value);
-        //     Enter.select(".node-text").style('font-size', fontSize + 'px');
-           
-        //   });
           Enter.insert("rect", "text")
             .attr("x", function (d) {
               return d.bbox.x;
@@ -1013,6 +966,8 @@ window.ICTV.d3TaxonomyVisualization = function (
 
               return "#000000";
             });
+     
+
 
           // TODO: isn't this redundant?
           /*Update.select('circle.node')
@@ -1058,6 +1013,8 @@ window.ICTV.d3TaxonomyVisualization = function (
           //     findParent(d)
 
           // })
+          var font;
+         
 
           // .attr('cursor', 'pointer')
 
@@ -1069,7 +1026,9 @@ window.ICTV.d3TaxonomyVisualization = function (
               } else {
                 return "#000000";
               }
-            });
+            })
+            .style("font-size",(slider.property("value")+"rem"));
+           ;
 
           // Transform
           Update.select("text.legend-node-text")
@@ -1086,7 +1045,7 @@ window.ICTV.d3TaxonomyVisualization = function (
             })
             .style("fill", function (d) {
               findParent(d);
-            });
+            });      
 
           var Exit = children
             .exit()
