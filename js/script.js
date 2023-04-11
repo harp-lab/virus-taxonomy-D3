@@ -41,7 +41,7 @@ window.ICTV.d3TaxonomyVisualization = function (
       textDy: 10,
     },
     svg: {
-      height: $(window).height(),
+      height: $(window).height()*0.8,
       margin: {
         top: 0, //50,
         right: 0, //90,
