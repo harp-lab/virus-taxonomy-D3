@@ -35,8 +35,8 @@ window.ICTV.d3TaxonomyVisualization = function (
   const settings = {
     animationDuration: 900,
     node: {
-      radius: 12,
-      strokeWidth: 1,
+      radius: 13,
+      strokeWidth: 3,
       textDx: 25,
       textDy: 10,
     },
@@ -65,13 +65,34 @@ window.ICTV.d3TaxonomyVisualization = function (
   var num_flag = false;
   var num;
   var check;
+  var toolTip=false;
   // var dx=0;
+  var Slider=false;
   var arr = [];
   var temp = 0;
   var rankYear = 0;
   var Flag = true;
   var max = 0;
   var fs = 0;
+  var slider = d3.select(".taxonomy-panel").append("input")
+  .style("display","None")
+  .attr("class","slider")
+  .attr("type", "range")
+  .attr("min", 4)
+  .attr("max", 8)
+  .attr("value", 4)
+      
+  var Text=d3.select(".taxonomy-panel")
+  .append("h3")
+  .text("Font-Slider").style("display","None");
+
+  // var slider_zoom = d3.select(".taxonomy-panel").append("input")
+  //     .attr("type", "range")
+  //     .attr("min", 1)
+  //     .attr("max", 10)
+  //     .attr("value", 5)
+  //     .style("display","None");
+  
   // This will be populated with a release's species data.
   let speciesData = null;
   // Initialize the release control with MSL releases.
@@ -209,6 +230,7 @@ window.ICTV.d3TaxonomyVisualization = function (
     if (!controlEl) {
       throw new Error("Invalid release control");
     }
+    slider.attr("value",4);
 
     // Clear any existing options
     controlEl.innerHTML = null;
@@ -237,6 +259,7 @@ window.ICTV.d3TaxonomyVisualization = function (
     //  rankCount=releases_[i].rankCount;
 
     // }
+
   }
 
   // Display the taxonomy tree for the release selected by the user.
@@ -368,11 +391,14 @@ window.ICTV.d3TaxonomyVisualization = function (
         d.fixed = false;
       }
 
-      // var slider = d3.select(".taxonomy-panel").append("input")
-      // .attr("type", "range")
-      // .attr("min", 1)
-      // .attr("max", 10)
-      // .attr("value", 5);
+
+  //     slider
+  //     .on('input', function(e) {
+  //       console.log("FONTSLIDER");
+  //     var fontSize = e.target.value;
+  //   Enter.style('font-size', fontSize + 'px');
+   
+  // });
 
       // TODO: Consider renaming "ds" to "root"
       const ds = d3.hierarchy(data, function (d) {
@@ -412,6 +438,10 @@ window.ICTV.d3TaxonomyVisualization = function (
 
       // Create and populate the tree structure.
       createTree(ds);
+      slider.style("display","block");
+      Text.style("display","block");
+
+    
 
       // TODO: this needs a more informative name.
       var i = 0;
@@ -439,17 +469,16 @@ window.ICTV.d3TaxonomyVisualization = function (
           .call(zoom.scaleBy, settings.zoom.scaleFactor)
           .call(zoom)
           .on("dblclick.zoom", null);
-
-        // slider.on("input", function() {
-        //     // get the current value of the sliders
-        //     var value = this.value;
-        //     // set the scaling factor of the zoom behavior
-        //     var scaleFactor = value*0.2;
-        //     console.log("val : ",value);
-        //     // let svg=  d3.select(`${containerSelector} .taxonomy-panel svg`);
-        //      zoom.scaleBy(svg_zoom,scaleFactor);
-
-        // });
+          //  slider_zoom.on("input", function() {
+          //       // get the current value of the sliders
+          //       var value = this.value;
+          //       // set the scaling factor of the zoom behavior
+          //       var scaleFactor = value*0.2;
+          //       console.log("val : ",value);
+          //       // let svg=  d3.select(`${containerSelector} .taxonomy-panel svg`);
+          //        zoom.scaleBy(svg_zoom,scaleFactor);
+    
+          //   });
 
         // Use d3 to generate the tree layout/structure.
         const treeLayout = d3.tree().size([availableHeight, availableWidth]);
@@ -665,12 +694,12 @@ window.ICTV.d3TaxonomyVisualization = function (
             })
             .on("click", click)
             .on("mouseover", showTooltip)
-            .on("mousemove", mousemove)
+            // .on("mousemove", mousemove)
             .on("mouseout", hideTooltip);
 
           Enter.append("rect")
             .style("stroke", "black")
-            .style("stroke-width", "2px")
+            .style("stroke-width", "3px")
             .attr("width", function (d) {
               if (d.data.name === null) {
                 if (
@@ -741,6 +770,19 @@ window.ICTV.d3TaxonomyVisualization = function (
             .style("pointer-events", function (d, i) {
               return !d.data.parentDistance ? "none" : "all";
             });
+           
+
+            
+      //   slider.on("input", function() {
+      //     // get the current value of the sliders
+      //     var value = this.value;
+      //     // set the scaling factor of the zoom behavior
+      //     // var font_size=value+"rem";
+      //     console.log("FONT_SIZE",value);
+      //    Enter.style("font-size",value);
+
+      // });
+
 
           function getBB(ds) {
             ds.each(function (d) {
@@ -780,7 +822,7 @@ window.ICTV.d3TaxonomyVisualization = function (
             })
             .attr("dx", settings.node.textDx)
             .attr("dy", settings.node.textDy)
-            .style("font-size", "4rem")
+            .style("font-size","4rem")
             .text(function (d) {
               if (d.data.name === "Unassigned" || d.data.rankName === "tree") {
                 if (d.data.taxNodeID === "legend") {
@@ -822,12 +864,44 @@ window.ICTV.d3TaxonomyVisualization = function (
               );
             })
             .call(getBB);
+            // var children = svg.selectAll("g.node")
 
-          // d3.select('#slider')
-          //     .on('input', function() {
-          //     const fontSize = slider(this.value);
-          //     d3.select('body').style('font-size', fontSize + 'px');
-          // });
+                  slider
+                .on('input', function(e) {
+                const fontSize = e.target.value;
+                // console.log("FONT_SIZE",(e.target.value/2));
+                const r=(e.target.value)
+                console.log("FONT",fontSize);
+                var font=fontSize + 'rem';
+                console.log("FOnt",font);
+                Enter.select(".node-text").style('font-size', font);
+                Enter.select(".legend-node-text").style('font-size', font);
+                // Enter .select("circle.node")  .attr("r", function (d) {
+                //   if (d.data.name !== "Unassigned") {
+                //     return (settings.node.radius+r);
+                //   } else {
+                //     return 0;
+                //   }
+                // });
+                // Update.select("circle.node")
+                // .attr("r", function (d) {
+                //   if (d.data.name !== "Unassigned") {
+                //     return settings.node.radius+r;
+                //   } else {
+                //     return 0;
+                //   }
+                // })
+                });
+
+            
+
+        //  d3.select(".slider")
+        //       .on('input', function(e) {
+        //         // console.log("FONTSLIDER");
+        //       var fontSize = slider(this.value);
+        //     Enter.select(".node-text").style('font-size', fontSize + 'px');
+           
+        //   });
           Enter.insert("rect", "text")
             .attr("x", function (d) {
               return d.bbox.x;
@@ -852,7 +926,7 @@ window.ICTV.d3TaxonomyVisualization = function (
 
           Update.select("rect")
             .style("stroke", "black")
-            .style("stroke-width", "1px")
+            .style("stroke-width", "2px")
             .attr("width", function (d) {
               if (d.data.name === "Unassigned") {
                 if (
@@ -1148,13 +1222,19 @@ window.ICTV.d3TaxonomyVisualization = function (
               update(d);
             }
           }
+          var div = d3
+          .select(containerSelector)
+          .append("div")
+          // .transition()
+          // .delay(1000)
+          .attr("class", "tooltip")
 
           function showTooltip(e, d) {
             var c = d.data.child_counts;
             if (d.data.taxNodeID !== "legend" && d.data.rankName !== "tree") {
               // dmd 01/31/23 Replaced "body" with containerSelector.
               d3.select(containerSelector).selectAll("div.tooltip").remove();
-
+              toolTip=true;
               // dmd 01/31/23 Replaced "body" with containerSelector, replaced "event" with "e".
               var div = d3
                 .select(containerSelector)
@@ -1162,7 +1242,6 @@ window.ICTV.d3TaxonomyVisualization = function (
                 // .transition()
                 // .delay(1000)
                 .attr("class", "tooltip")
-
                 .style("opacity", 1)
                 .style("left", e.pageX + settings.tooltipOffsetX + "px")
                 .style("top", e.pageY + settings.tooltipOffsetY + "px")
@@ -1188,13 +1267,27 @@ window.ICTV.d3TaxonomyVisualization = function (
           function mousemove(d) {
             // dmd 01/31/23 Replaced "body" with containerSelector.
             // d3.select(tooltip).transition().delay(1000);
+            console.log("Hi");
           }
 
           function hideTooltip(d) {
             // dmd 01/31/23 Replaced "body" with containerSelector
             // dmd 02/08/23 Removed the transition delay
             //d3.select(containerSelector).selectAll('div.tooltip').transition().remove();
-            d3.select(containerSelector).selectAll("div.tooltip").remove();
+            // d3.select(containerSelector).selectAll("div.tooltip")
+           
+            // if(toolTip===true){
+            //   d3.select(containerSelector).selectAll("div.tooltip")
+              
+            //   .style("display", "none");
+            // }
+            toolTip=false;
+            setTimeout(function() {
+              if (!toolTip) {
+                d3.select(containerSelector).selectAll("div.tooltip").style("display", "none");
+              }
+            }, 1000);
+         
           }
         }
       }
