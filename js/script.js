@@ -41,7 +41,7 @@ window.ICTV.d3TaxonomyVisualization = function (
       textDy: 25,
     },
     svg: {
-      height: $(window).height()*0.8,
+      height: $(window).height() * 0.8,
       margin: {
         top: 0, //50,
         right: 0, //90,
@@ -65,9 +65,9 @@ window.ICTV.d3TaxonomyVisualization = function (
   var num_flag = false;
   var num;
   var check;
-  var toolTip=false;
+  var toolTip = false;
   // var dx=0;
-  var Slider=false;
+  var Slider = false;
   var arr = [];
   var temp = 0;
   var rankYear = 0;
@@ -75,19 +75,23 @@ window.ICTV.d3TaxonomyVisualization = function (
   var max = 0;
   var fs = 0;
   //declaring the slider
-  var slider = d3.select(".taxonomy-panel").append("input")
-  .style("display","None")
-  .attr("class","slider")
-  .attr("type", "range")
-  .attr("min", 4)
-  .attr("max", 8)
-  .attr("value", 4)
-      
-  var Text=d3.select(".taxonomy-panel")
-  .append("h4")
-  .attr("class","text_slider")
-  .text("Font-Slider").style("display","None");
-  
+  var slider = d3
+    .select(".taxonomy-panel")
+    .append("input")
+    .style("display", "None")
+    .attr("class", "slider")
+    .attr("type", "range")
+    .attr("min", 4)
+    .attr("max", 8)
+    .attr("value", 4);
+
+  var Text = d3
+    .select(".taxonomy-panel")
+    .append("h4")
+    .attr("class", "text_slider")
+    .text("Font-Slider")
+    .style("display", "None");
+
   // This will be populated with a release's species data.
   let speciesData = null;
   // Initialize the release control with MSL releases.
@@ -252,7 +256,6 @@ window.ICTV.d3TaxonomyVisualization = function (
     //  rankCount=releases_[i].rankCount;
 
     // }
-
   }
 
   // Display the taxonomy tree for the release selected by the user.
@@ -384,7 +387,6 @@ window.ICTV.d3TaxonomyVisualization = function (
         d.fixed = false;
       }
 
-
       // TODO: Consider renaming "ds" to "root"
       const ds = d3.hierarchy(data, function (d) {
         if (d.children === null) {
@@ -421,27 +423,23 @@ window.ICTV.d3TaxonomyVisualization = function (
         }
       });
 
-   // changing the font on change of slider
-      slider
-      .on('input', function(e) {
-      const fontSize = e.target.value;
-      // console.log("FONT_SIZE",(e.target.value/2));
-      const r=(e.target.value)
-      console.log("FONT",fontSize);
-      font="";
-      font=fontSize + 'rem';
-      console.log("FOnt",font);
-      d3.selectAll("text")
-      .style("font-size", font );
-      getBBox(ds);
+      // changing the font on change of slider
+      slider.on("input", function (e) {
+        const fontSize = e.target.value;
+        // console.log("FONT_SIZE",(e.target.value/2));
+        const r = e.target.value;
+        console.log("FONT", fontSize);
+        font = "";
+        font = fontSize + "rem";
+        console.log("FOnt", font);
+        d3.selectAll("text").style("font-size", font);
+        getBBox(ds);
       });
-         // Create and populate the tree structure.
+      // Create and populate the tree structure.
       createTree(ds);
       //displaying the slider only if a release is selected
-      slider.style("display","block");
-      Text.style("display","block");
-
-    
+      slider.style("display", "block");
+      Text.style("display", "block");
 
       // TODO: this needs a more informative name.
       var i = 0;
@@ -723,8 +721,10 @@ window.ICTV.d3TaxonomyVisualization = function (
           }
 
           Enter.append("text")
-          .attr("dy",".35rem")
-          .attr("x", function(d) { return d.children ? -13 : 13; })
+            .attr("dy", ".35rem")
+            .attr("x", function (d) {
+              return d.children ? -13 : 13;
+            })
             .attr("class", function (d) {
               return d.data.taxNodeID === "legend"
                 ? "legend-node-text"
@@ -736,9 +736,7 @@ window.ICTV.d3TaxonomyVisualization = function (
             .attr("x", function (d, i) {
               if (d.data.rankIndex === 0) {
                 return d.children || d._children ? 10 : -10;
-              } else if (
-                d.data.taxNodeID !== "legend"
-              ) {
+              } else if (d.data.taxNodeID !== "legend") {
                 return d.children || d._children ? 0 : 10;
               }
             })
@@ -753,7 +751,7 @@ window.ICTV.d3TaxonomyVisualization = function (
                 return d.children || d._children ? "end" : "start";
               }
             })
-            .style("font-size","4rem")
+            .style("font-size", "4rem")
             .attr("dx", settings.node.textDx)
             .attr("dy", settings.node.textDy)
             .text(function (d) {
@@ -781,7 +779,7 @@ window.ICTV.d3TaxonomyVisualization = function (
               return "#000000";
             })
             .on("click", function (e, d) {
-              slider.attr("value",4);
+              slider.attr("value", 4);
               console.log("in click d = ", d, num);
               //  check=rankYear;
               return displaySpecies(
@@ -911,8 +909,6 @@ window.ICTV.d3TaxonomyVisualization = function (
 
               return "#000000";
             });
-     
-
 
           // TODO: isn't this redundant?
           /*Update.select('circle.node')
@@ -959,7 +955,6 @@ window.ICTV.d3TaxonomyVisualization = function (
 
           // })
           var font;
-         
 
           // .attr('cursor', 'pointer')
 
@@ -972,9 +967,7 @@ window.ICTV.d3TaxonomyVisualization = function (
                 return "#000000";
               }
             })
-            .style("font-size",(slider.property("value")+"rem"));
-           ;
-
+            .style("font-size", slider.property("value") + "rem");
           // Transform
           Update.select("text.legend-node-text")
             .attr("transform", function (d, i) {
@@ -984,7 +977,7 @@ window.ICTV.d3TaxonomyVisualization = function (
             })
             .style("fill", function (d) {
               findParent(d);
-            });      
+            });
 
           var Exit = children
             .exit()
@@ -1121,18 +1114,18 @@ window.ICTV.d3TaxonomyVisualization = function (
             }
           }
           var div = d3
-          .select(containerSelector)
-          .append("div")
-          // .transition()
-          // .delay(1000)
-          .attr("class", "tooltip")
+            .select(containerSelector)
+            .append("div")
+            // .transition()
+            // .delay(1000)
+            .attr("class", "tooltip");
 
           function showTooltip(e, d) {
             var c = d.data.child_counts;
             if (d.data.taxNodeID !== "legend" && d.data.rankName !== "tree") {
               // dmd 01/31/23 Replaced "body" with containerSelector.
               d3.select(containerSelector).selectAll("div.tooltip").remove();
-              toolTip=true;
+              toolTip = true;
               // dmd 01/31/23 Replaced "body" with containerSelector, replaced "event" with "e".
               var div = d3
                 .select(containerSelector)
@@ -1173,19 +1166,20 @@ window.ICTV.d3TaxonomyVisualization = function (
             // dmd 02/08/23 Removed the transition delay
             //d3.select(containerSelector).selectAll('div.tooltip').transition().remove();
             // d3.select(containerSelector).selectAll("div.tooltip")
-           
+
             // if(toolTip===true){
             //   d3.select(containerSelector).selectAll("div.tooltip")
-              
+
             //   .style("display", "none");
             // }
-            toolTip=false;
-            setTimeout(function() {
+            toolTip = false;
+            setTimeout(function () {
               if (!toolTip) {
-                d3.select(containerSelector).selectAll("div.tooltip").style("display", "none");
+                d3.select(containerSelector)
+                  .selectAll("div.tooltip")
+                  .style("display", "none");
               }
             }, 2000);
-         
           }
         }
       }
