@@ -35,9 +35,9 @@ window.ICTV.d3TaxonomyVisualization = function (
   const settings = {
     animationDuration: 900,
     node: {
-      radius: 13,
+      radius: 15,
       strokeWidth: 3,
-      textDx: 25,
+      textDx: 35,
       textDy: 25,
     },
     svg: {
@@ -650,12 +650,12 @@ window.ICTV.d3TaxonomyVisualization = function (
                   d.data.rankName === "realm" &&
                   d.data.taxNodeID !== "legend"
                 ) {
-                  return "20px";
+                  return "30px";
                 } else if (
                   d.data.has_assigned_siblings === true ||
                   d.data.has_unassigned_siblings === true
                 ) {
-                  return "20px";
+                  return "30px";
                 } else {
                   return "0px";
                 }
@@ -667,12 +667,12 @@ window.ICTV.d3TaxonomyVisualization = function (
                   d.data.rankName === "realm" &&
                   d.data.taxNodeID !== "legend"
                 ) {
-                  return "20px";
+                  return "30px";
                 } else if (
                   d.data.has_assigned_siblings === true &&
                   d.data.has_unassigned_siblings === true
                 ) {
-                  return "20px";
+                  return "30px";
                 } else {
                   return "0px";
                 }
@@ -686,6 +686,12 @@ window.ICTV.d3TaxonomyVisualization = function (
 
               findParent(d);
             })
+            .attr("dx", settings.node.textDx)
+            .attr("dy", settings.node.textDy)
+            .attr("x", function (d) {
+              return d.children ? -10: -10;
+            })
+            .attr("y",-10)
             .attr("cursor", "pointer");
 
           Enter.append("circle")
@@ -809,7 +815,8 @@ window.ICTV.d3TaxonomyVisualization = function (
             })
             .style("fill", "white")
             .attr("dx", settings.node.textDx)
-            .attr("dy", settings.node.textDy);
+            .attr("dy", settings.node.textDy)
+            ;
 
           var Update = Enter.merge(children);
           Update.transition()
@@ -827,12 +834,12 @@ window.ICTV.d3TaxonomyVisualization = function (
                   d.data.rankName === "realm" &&
                   d.data.taxNodeID !== "legend"
                 ) {
-                  return "20px";
+                  return "30px";
                 } else if (
                   d.data.has_assigned_siblings === true ||
                   d.data.has_unassigned_siblings === true
                 ) {
-                  return "20px";
+                  return "30px";
                 } else {
                   return "0px";
                 }
@@ -844,12 +851,12 @@ window.ICTV.d3TaxonomyVisualization = function (
                   d.data.rankName === "realm" &&
                   d.data.taxNodeID !== "legend"
                 ) {
-                  return "20px";
+                  return "30px";
                 } else if (
                   d.data.has_assigned_siblings === true ||
                   d.data.has_unassigned_siblings === true
                 ) {
-                  return "20px";
+                  return "30px";
                 } else {
                   return "0px";
                 }
@@ -1012,7 +1019,7 @@ window.ICTV.d3TaxonomyVisualization = function (
               var pos = { x: source.x0, y: source.y0 };
               return diagonal(pos, pos);
             })
-            .style("stroke-width", "2px")
+            .style("stroke-width", "4px")
             .style("fill", "none")
             .style("stroke", "#ccc")
             .style("display", function (d) {
