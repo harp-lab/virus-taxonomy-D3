@@ -9,6 +9,16 @@
 #d3_taxonomy_vis_container .release-panel {
     width: 100%;
 }
+.slider{
+    position:relative;
+    right:-100px;
+    top:-20px;
+}
+.text_slider{
+    position:relative;
+    right:-100px;
+    top:-30px;
+}
 #d3_taxonomy_vis_container .release-panel .release-control {
     border-radius: 10px;
 }
