@@ -38,7 +38,7 @@ window.ICTV.d3TaxonomyVisualization = function (
       radius: 13,
       strokeWidth: 3,
       textDx: 25,
-      textDy: 10,
+      textDy: 25,
     },
     svg: {
       height: $(window).height()*0.8,
@@ -75,7 +75,7 @@ window.ICTV.d3TaxonomyVisualization = function (
   var max = 0;
   var fs = 0;
   //declaring the slider
-  var slider = d3.select(".release-panel").append("input")
+  var slider = d3.select(".taxonomy-panel").append("input")
   .style("display","None")
   .attr("class","slider")
   .attr("type", "range")
@@ -83,7 +83,7 @@ window.ICTV.d3TaxonomyVisualization = function (
   .attr("max", 8)
   .attr("value", 4)
       
-  var Text=d3.select(".release-panel")
+  var Text=d3.select(".taxonomy-panel")
   .append("h4")
   .attr("class","text_slider")
   .text("Font-Slider").style("display","None");
@@ -669,12 +669,12 @@ window.ICTV.d3TaxonomyVisualization = function (
                   d.data.rankName === "realm" &&
                   d.data.taxNodeID !== "legend"
                 ) {
-                  return "15px";
+                  return "20px";
                 } else if (
                   d.data.has_assigned_siblings === true &&
                   d.data.has_unassigned_siblings === true
                 ) {
-                  return "15px";
+                  return "20px";
                 } else {
                   return "0px";
                 }
@@ -723,6 +723,8 @@ window.ICTV.d3TaxonomyVisualization = function (
           }
 
           Enter.append("text")
+          .attr("dy",".35rem")
+          .attr("x", function(d) { return d.children ? -13 : 13; })
             .attr("class", function (d) {
               return d.data.taxNodeID === "legend"
                 ? "legend-node-text"
@@ -751,9 +753,9 @@ window.ICTV.d3TaxonomyVisualization = function (
                 return d.children || d._children ? "end" : "start";
               }
             })
+            .style("font-size","4rem")
             .attr("dx", settings.node.textDx)
             .attr("dy", settings.node.textDy)
-            .style("font-size","4rem")
             .text(function (d) {
               if (d.data.name === "Unassigned" || d.data.rankName === "tree") {
                 if (d.data.taxNodeID === "legend") {
@@ -791,6 +793,8 @@ window.ICTV.d3TaxonomyVisualization = function (
                 release_
               );
             })
+            .attr("dx", settings.node.textDx)
+            .attr("dy", settings.node.textDy)
             .call(getBB);
           Enter.insert("rect", "text")
             .attr("x", function (d) {
@@ -805,7 +809,9 @@ window.ICTV.d3TaxonomyVisualization = function (
             .attr("height", function (d) {
               return d.bbox.height;
             })
-            .style("fill", "white");
+            .style("fill", "white")
+            .attr("dx", settings.node.textDx)
+            .attr("dy", settings.node.textDy);
 
           var Update = Enter.merge(children);
           Update.transition()
@@ -823,12 +829,12 @@ window.ICTV.d3TaxonomyVisualization = function (
                   d.data.rankName === "realm" &&
                   d.data.taxNodeID !== "legend"
                 ) {
-                  return "15px";
+                  return "20px";
                 } else if (
                   d.data.has_assigned_siblings === true ||
                   d.data.has_unassigned_siblings === true
                 ) {
-                  return "15px";
+                  return "20px";
                 } else {
                   return "0px";
                 }
@@ -840,17 +846,19 @@ window.ICTV.d3TaxonomyVisualization = function (
                   d.data.rankName === "realm" &&
                   d.data.taxNodeID !== "legend"
                 ) {
-                  return "15px";
+                  return "20px";
                 } else if (
                   d.data.has_assigned_siblings === true ||
                   d.data.has_unassigned_siblings === true
                 ) {
-                  return "15px";
+                  return "20px";
                 } else {
                   return "0px";
                 }
               }
             })
+            .attr("dx", settings.node.textDx)
+            .attr("dy", settings.node.textDy)
             .style("fill", function (d) {
               let color = getRankColor(!!d._children, d.data.rankName);
               if (!!color) {

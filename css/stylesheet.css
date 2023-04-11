@@ -9,6 +9,11 @@
 #d3_taxonomy_vis_container .release-panel {
     width: 100%;
 }
+.node circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .slider{
     position:relative;
     right:-100px;
@@ -16,7 +21,7 @@
 }
 .text_slider{
     position:relative;
-    right:-100px;
+    right:-105px;
     top:-30px;
 }
 #d3_taxonomy_vis_container .release-panel .release-control {
@@ -78,9 +83,6 @@
     background-color: #efefef;
     height: 100%;
     overflow-y: auto;
-
-    /* min-width: 250px; */
-    /* padding: 15px; */
     width: 15%;
 }
 #d3_taxonomy_vis_container .species-panel .parent-name {
