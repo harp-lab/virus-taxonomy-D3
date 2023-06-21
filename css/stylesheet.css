@@ -1,97 +1,145 @@
-/* The top-level container Element */
+
+/* The module's top-level container Element */
 #d3_taxonomy_vis_container {
     height: 100%;
     overflow: hidden;
     width: 100%;
 }
 
-/* The release panel */
-#d3_taxonomy_vis_container .release-panel {
+/* The header panel */
+#d3_taxonomy_vis_container .header-panel {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
     width: 100%;
 }
-.node circle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.slider{
-    position:relative;
-    right:-100px;
-    top:-20px;
-}
-.text_slider{
-    position:relative;
-    right:-105px;
-    top:-30px;
-}
-#d3_taxonomy_vis_container .release-panel .release-control {
+#d3_taxonomy_vis_container .header-panel .label {
+    margin-right: 0.5rem;
+} 
+#d3_taxonomy_vis_container .header-panel .release-ctrl {
     border-radius: 10px;
+    width: auto;
 }
 
+#d3_taxonomy_vis_container .header-panel .font-size-panel {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    margin-left: 1.5rem;
+}
+#d3_taxonomy_vis_container .font-size-panel.hide {
+    display: none;
+}
+#d3_taxonomy_vis_container .font-size-panel.show {
+    display: flex;
+}
+
+/*
+#d3_taxonomy_vis_container .font-size-panel .slider {
+    
+}
+*/
+
+/* The body panel */
 #d3_taxonomy_vis_container .body-panel {
     align-items: flex-start;
     display: flex;
     flex: 1 0 auto;
     flex-flow: row nowrap;
-    height: 100vh;
+    height: 83vh;
     justify-content: flex-start;
-    width: 100vw;
+    width: 100%;
 }
-
 
 #d3_taxonomy_vis_container .taxonomy-panel {
     height: 100%;
-    width: 83%;
+    width: 82vw;
 }
-
+#d3_taxonomy_vis_container .node {
+    cursor: pointer;
+}
+#d3_taxonomy_vis_container .node circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #d3_taxonomy_vis_container .node-text {
     /* font-size: 1.5rem; */
     font-weight: bold;
     font-style: italic;
     text-align: right;
 }
+#d3_taxonomy_vis_container .unassigned-text {
+    color: #999;
+    text-align: right;
+}
 #d3_taxonomy_vis_container .legend-node-text {
     font-size: 1.5rem;
-    /* /font-weight: bold;/ */
     font-style: normal;
     text-align: center;
     text-transform: capitalize;
-    /* transform: rotateY(0deg) rotate(-45deg); */
+    transform: rotate(-45deg) /*translateX(-1.0rem)*/;
     transform-origin: left left; 
 }
 
-/* The tooltip */
-#d3_taxonomy_vis_container div.tooltip {
-    position: absolute;
-    width: auto;
-    height: auto;
-    padding: 2px;
-    background: #f3f3ef;
-    border: solid 1px #aaa;
-    border-radius: 8px;
-    opacity: 0;
+
+/* The tippy tooltip */
+.ictv-tax-viz-tooltip .rank-and-name {
+    align-items: baseline;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 1.0rem;
+    padding-bottom: 0.20rem;
+    text-transform: capitalize;
+}
+.ictv-tax-viz-tooltip .history {
+    margin-top: 0.5rem;
+}
+.ictv-tax-viz-tooltip .child-count {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 0.25rem;
+}
+.tippy-box[data-theme~='ICTV-Tooltip'] {
+    background-color: #eee;
+    color: #000;
+}
+.tippy-box[data-theme~='ICTV-Tooltip'] .tippy-arrow {
+    color: #eee;
 }
 
 
-#d3_taxonomy_vis_container div.tooltip:hover{
-    opacity: 1;
-    transition-delay: 1000;
-    -moz-transition-delay: 1000;
-}
-
+/* The species panel */
 #d3_taxonomy_vis_container .species-panel {
     background-color: #efefef;
     height: 100%;
     overflow-y: auto;
-    width: 15%;
+    width: 17vw;
+}
+#d3_taxonomy_vis_container .species-panel .parent-rank {
+    text-transform: capitalize;
 }
 #d3_taxonomy_vis_container .species-panel .parent-name {
+    font-size: 1.0rem;
     font-weight: bold;
+    text-align: center;
     margin-bottom: 1.0rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    word-break: normal;
+}
+#d3_taxonomy_vis_container .species-panel .parent-name:not(:empty) {
+    border-bottom-style: solid;
 }
 #d3_taxonomy_vis_container .species-panel .species-list {
     align-items: flex-start;
     display: flex;
+    font-size: .90rem;
     font-style: italic;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -99,8 +147,112 @@
 #d3_taxonomy_vis_container .species-panel .species-row {
     color: blue;
     margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    word-break: normal;
 }
 #d3_taxonomy_vis_container .species-panel .species-row:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+
+/* CSS for searchPanel.js */
+#d3_taxonomy_vis_container .header-panel .search-panel {
+    justify-self: flex-end;
+    margin-left: 2.0rem;
+}
+#d3_taxonomy_vis_container .header-panel .search-panel * {
+    font-size: 0.8rem;
+}
+
+#d3_taxonomy_vis_container .search-panel .search-controls {
+    align-content: flex-start;
+    border-collapse: separate;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+#d3_taxonomy_vis_container .search-panel .search-text {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    color: #555;
+    line-height: 1.3;
+    margin: 0;
+    outline: none !important;
+    vertical-align: middle;
+    width: 200px;
+}
+
+#d3_taxonomy_vis_container .search-panel i {
+    margin-right: 5px;
+}
+
+#d3_taxonomy_vis_container .search-panel button {
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 0 0.6rem;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+#d3_taxonomy_vis_container .search-panel .search-button {
+    background-color: #0062cc;
+    border-collapse: separate;
+    border-color: #005cbf;
+    border-radius: 0;
+    color: #fff;
+}
+#d3_taxonomy_vis_container .search-panel .clear-button {
+    background-color: rgb(153, 153, 153);
+    border-color: rgba(0, 0, 0, 0);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 4px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0px;
+    margin-left: -1px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+#d3_taxonomy_vis_container .search-panel .all-releases-row {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    margin: 0;
+}
+#d3_taxonomy_vis_container .search-panel .include-all-releases {
+    height: 1.0rem;
+    margin-right: 0.25rem;
+}
+#d3_taxonomy_vis_container .search-panel label {
+    font-size: 11pt;
+    font-weight: normal;
+}
+
+/* The spinner icon and message */
+#d3_taxonomy_vis_container .search-results-panel .spinner-icon {
+    font-size: 1.2rem;
+}
+#d3_taxonomy_vis_container .search-results-panel .spinner-message {
+    font-size: 1.0rem;
+}
+
+/* The row above the table that contains "Show x entries" */
+#d3_taxonomy_vis_container .search-results-panel .dataTables_length {
+    margin: 0.5rem 0;
+}
+
+/* The "Show x entries" label and control above the data table. */
+#d3_taxonomy_vis_container .search-results-panel .dataTables_length label,
+#d3_taxonomy_vis_container .search-results-panel .dataTables_length select {
+	font-size: 0.75rem !important;
+    padding: 0;
 }
