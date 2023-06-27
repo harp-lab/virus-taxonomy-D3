@@ -320,36 +320,53 @@ window.ICTV.d3TaxonomyVisualization = function (
     
     
     
-    function initializeZoomPanel() {
-        ZoomPanelEl = document.querySelector(`${containerSelector} .font-size-panel`);
-        if (!ZoomPanelEl) { throw new Error("Invalid font size panel Element"); }
+let zoom = d3.zoom()
+  .on("zoom", function (event) {
+    d3.select(`${containerSelector} .taxonomy-panel svg g`)
+      .attr("transform", event.transform);
+  });
+
+var svg_zoom = d3
+  .select(`${containerSelector} .taxonomy-panel svg`)
+  .call(
+      zoom.translateBy,
+      settings.zoom.translateX,
+      settings.zoom.translateY
+  )
+  .call(zoom.scaleBy, settings.zoom.scaleFactor)
+  .call(zoom)
+  .on("dblclick.zoom", null);
+
+  function initializeZoomPanel() {
+    let ZoomPanelEl = document.querySelector(`${containerSelector} .font-size-panel`);
+    if (!ZoomPanelEl) { throw new Error("Invalid font size panel Element"); }
+  
+    if (ZoomPanelEl.classList.contains("show")) { ZoomPanelEl.classList.remove("show"); }
     
-        if (ZoomPanelEl.classList.contains("show")) { ZoomPanelEl.classList.remove("show"); }
-        ZoomPanelEl.classList.add("hide");
-    
-        d3
-            .select(".font-size-panel")
-            .append("div")
-            .attr("class", "label")
-            .text("Zoom Slider");
-    
-        ZoomSliderEl = d3
-    .select(".font-size-panel")
-    .append("input")
-    .attr("class", "slider")
-    .attr("type", "range")
-    .attr("min", 0.1)
-    .attr("max", 1)
-    .attr("step", 0.01)
-    .attr("value", 1);
-    
-        const treeTextSelector = `${containerSelector} .taxonomy-panel svg g`;
-    
-        ZoomSliderEl.on("input", function (e) {
-            const zoomValue = e.target.value;
-            d3.select(treeTextSelector).attr("transform", `scale(${zoomValue})`);
-        });
-    }
+    d3
+        .select(".font-size-panel")
+        .append("div")
+        .attr("class", "label")
+        .text("Zoom Slider");
+  
+    let ZoomSliderEl = d3
+        .select(".font-size-panel")
+        .append("input")
+        .attr("class", "slider")
+        .attr("type", "range")
+        .attr("min", 0.1)
+        .attr("max", 1)
+        .attr("step", 0.01)
+        .attr("value", 0.1);
+  
+    ZoomSliderEl.on("input", function (e) {
+      const zoomValue = e.target.value;
+      const svg = d3.select(`${containerSelector} .taxonomy-panel svg`);
+  
+      let currentTransform = d3.zoomTransform(svg.node());
+      svg.call(zoom.transform, d3.zoomIdentity.translate(currentTransform.x, currentTransform.y).scale(zoomValue));
+    });
+  }
     
 
     function initializeFontSizePanel() {
