@@ -354,10 +354,10 @@ var svg_zoom = d3
         .append("input")
         .attr("class", "slider")
         .attr("type", "range")
-        .attr("min", 0.1)
+        .attr("min", 0.19)
         .attr("max", 1)
         .attr("step", 0.01)
-        .attr("value", 0.1);
+        .attr("value", 0.19);
   
     ZoomSliderEl.on("input", function (e) {
       const zoomValue = e.target.value;
