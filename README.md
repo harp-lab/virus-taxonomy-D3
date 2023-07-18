@@ -1,5 +1,6 @@
 # Virus Taxonomy D3
 A web visualization project to display the virus taxonomy in hierarchical treeview. 
+Live view: [https://harp-lab.github.io/virus-taxonomy-D3/](https://harp-lab.github.io/virus-taxonomy-D3/)
 ## Environment
 
 - Editor: [Visual Studio Code](https://code.visualstudio.com/download)
