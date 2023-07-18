@@ -77,12 +77,17 @@ window.ICTV.d3TaxonomyVisualization = function (
     var num_flag = false;
     var num;
     var check;
+    var name="";
     var arr = [];
     var temp = 0;
     var rankYear = 0;
     var Flag = true;
     var max = 0;
     var fs = 0;
+    var Sflag=false
+    var counter=0;
+    var len=0;
+    var res=[];
     // var zoom = d3.zoom().on("zoom", handleZoom);
     // function handleZoom(e) {
     //     d3.select(`${containerSelector} svg g`).attr("transform", e.transform);
@@ -167,7 +172,7 @@ window.ICTV.d3TaxonomyVisualization = function (
             speciesEl.setAttribute("data-taxnode-id", species.taxNodeID);
 
             speciesEl.addEventListener("click", function (e) {
-
+                    
                 const taxNodeID = e.target.getAttribute("data-taxnode-id");
 
                 window.open(`${taxonDetailsURL}?taxnode_id=${taxNodeID}`, "_blank");
@@ -214,62 +219,80 @@ window.ICTV.d3TaxonomyVisualization = function (
         }
     }
 
+
     function initializeButton() {
+        // Get a reference to the panel Element.
         let buttonE1 = document.querySelector(`${containerSelector} .font-size-panel`);
         if (!buttonE1) { throw new Error("Invalid font size panel Element"); }
     
+        // Create a button.
         let buttonClickE1 = d3
             .select(`${containerSelector} .font-size-panel`)
             .append("button")
             .attr("class", "label")
             .text("Take a screenshot");
     
+        // Create a dropdown for format selection.
         let selectFormat = d3.select(`${containerSelector} .font-size-panel`)
             .append("select")
             .attr("class", "selectFormat");
     
-       
+        // Add options to the dropdown.
         selectFormat.selectAll("option")
-            .data(["png", "jpeg", "pdf", "svg"]) 
+            .data(["png", "jpeg", "pdf", "svg"]) // SVG supported now
             .enter()
             .append("option")
             .attr("value", function(d) { return d; })
             .text(function(d) { return d.toUpperCase(); });
     
+        // Click on button to get screenshot.
         buttonClickE1.on("click", function (e) {
             console.log('clicked ss');
             const selectedFormat = selectFormat.node().value;
-            let svgEls = document.querySelectorAll(`${containerSelector} svg`);
-    
-            if (selectedFormat === "svg") {
-    
-    let combinedSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-
-    svgEls.forEach((svgEl, index) => {
-        let g = document.createElementNS("http://www.w3.org/2000/svg", "g");
         
-        if(index == 1) {
-            g.setAttribute("transform", "translate(500, 0)");  
-        }
+            // Get references to taxonomy and species panels.
+            let svgEls = d3.selectAll(`${containerSelector} .taxonomy-panel svg, ${containerSelector} .species-panel svg`).nodes();
 
-        let node = document.importNode(svgEl, true); 
-        g.appendChild(node);
+            console.log(svgEls);
+        
+            if (selectedFormat === "svg") {
+                // Create a new svg element
+                let combinedSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        
+                // Loop through each svg element in the container
+                svgEls.forEach((svgEl, index) => {
+                    // Create a group element to hold the contents of each svg
+                    let g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+                
+                    // Adjust the transform to offset the elements (you might need to adjust this based on your layout)
+                    if(index == 1) {
+                        g.setAttribute("transform", "translate(1500, 0)");  // adjust translation based on your layout
+                    }
+        
+                    // Import the svg element's contents into the group
+                    let node = document.importNode(svgEl, true);  // set to true to clone all descendants
+                    g.appendChild(node);
+        
+                    // Append the group to the combined svg
+                    combinedSvg.appendChild(g);
+                });
+        
+                // Save the combined svg
+                let svgData = new XMLSerializer().serializeToString(combinedSvg);
+                let preface = '<?xml version="1.0" standalone="no"?>\r\n';
+                let svgBlob = new Blob([preface, svgData], {type:"image/svg+xml;charset=utf-8"});
+                let svgUrl = URL.createObjectURL(svgBlob);
+                let downloadLink = document.createElement("a");
+                downloadLink.href = svgUrl;
+                downloadLink.download = "screenshot.svg";
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            }
 
-        combinedSvg.appendChild(g);
-    });
-
-    let svgData = new XMLSerializer().serializeToString(combinedSvg);
-    let preface = '<?xml version="1.0" standalone="no"?>\r\n';
-    let svgBlob = new Blob([preface, svgData], {type:"image/svg+xml;charset=utf-8"});
-    let svgUrl = URL.createObjectURL(svgBlob);
-    let downloadLink = document.createElement("a");
-    downloadLink.href = svgUrl;
-    downloadLink.download = "screenshot.svg";
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-}
  else {
+                // Handle other formats
+                // Get references to taxonomy and species panels.
                 let taxonomyPanel = document.querySelector(".taxonomy-panel"); 
                 let speciesPanel = document.querySelector(".species-panel");
     
@@ -279,6 +302,7 @@ window.ICTV.d3TaxonomyVisualization = function (
                     });
                 };
     
+                // Handle png and jpeg formats
                 if (selectedFormat === "png" || selectedFormat === "jpeg") {
                     Promise.all([processPanel(taxonomyPanel), processPanel(speciesPanel)]).then((screenshots) => {
                         let img1 = new Image();
@@ -287,11 +311,11 @@ window.ICTV.d3TaxonomyVisualization = function (
                         img1.onload = function() {
                             img2.onload = function() {
                                 let canvas = document.createElement('canvas');
-                                canvas.width = img1.width + img2.width; 
-                                canvas.height = Math.max(img1.height, img2.height); 
+                                canvas.width = img1.width + img2.width; // Adjust width to sum of both images
+                                canvas.height = Math.max(img1.height, img2.height); // Height is the tallest image
                                 let ctx = canvas.getContext('2d');
                                 ctx.drawImage(img1, 0, 0);
-                                ctx.drawImage(img2, img1.width, 0); 
+                                ctx.drawImage(img2, img1.width, 0); // Draw img2 to the right of img1
                             
                                 let link = document.createElement('a');
                                 link.setAttribute('download', `screenshot.${selectedFormat}`);
@@ -303,6 +327,7 @@ window.ICTV.d3TaxonomyVisualization = function (
                         img1.src = screenshots[0];
                     });
                 } 
+                // Handle pdf format
                 else if (selectedFormat === "pdf") {
                     let printWindow = window.open('', '_blank');
                     printWindow.document.write('<html><head><title>Print</title></head><body>');
@@ -318,57 +343,60 @@ window.ICTV.d3TaxonomyVisualization = function (
     
     
     
-    
-    
-let zoom = d3.zoom()
-  .on("zoom", function (event) {
-    d3.select(`${containerSelector} .taxonomy-panel svg g`)
-      .attr("transform", event.transform);
-  });
 
-var svg_zoom = d3
-  .select(`${containerSelector} .taxonomy-panel svg`)
-  .call(
-      zoom.translateBy,
-      settings.zoom.translateX,
-      settings.zoom.translateY
-  )
-  .call(zoom.scaleBy, settings.zoom.scaleFactor)
-  .call(zoom)
-  .on("dblclick.zoom", null);
-
-  function initializeZoomPanel() {
-    let ZoomPanelEl = document.querySelector(`${containerSelector} .font-size-panel`);
-    if (!ZoomPanelEl) { throw new Error("Invalid font size panel Element"); }
-  
-    if (ZoomPanelEl.classList.contains("show")) { ZoomPanelEl.classList.remove("show"); }
     
-    d3
-        .select(".font-size-panel")
-        .append("div")
-        .attr("class", "label")
-        .text("Zoom Slider");
-  
-    let ZoomSliderEl = d3
-        .select(".font-size-panel")
-        .append("input")
-        .attr("class", "slider")
-        .attr("type", "range")
-        .attr("min", 0.19)
-        .attr("max", 1)
-        .attr("step", 0.01)
-        .attr("value", 0.19);
-  
-    ZoomSliderEl.on("input", function (e) {
-      const zoomValue = e.target.value;
-      const svg = d3.select(`${containerSelector} .taxonomy-panel svg`);
-  
-      let currentTransform = d3.zoomTransform(svg.node());
-      svg.call(zoom.transform, d3.zoomIdentity.translate(currentTransform.x, currentTransform.y).scale(zoomValue));
+    
+
+    let zoom = d3.zoom()
+    .on("zoom", function (event) {
+      d3.select(`${containerSelector} .taxonomy-panel svg g`)
+        .attr("transform", event.transform);
     });
-  }
+  
+  var svg_zoom = d3
+    .select(`${containerSelector} .taxonomy-panel svg`)
+    .call(
+        zoom.translateBy,
+        settings.zoom.translateX,
+        settings.zoom.translateY
+    )
+    .call(zoom.scaleBy, settings.zoom.scaleFactor)
+    .call(zoom)
+    .on("dblclick.zoom", null);
+  
+    function initializeZoomPanel() {
+      let ZoomPanelEl = document.querySelector(`${containerSelector} .font-size-panel`);
+      if (!ZoomPanelEl) { throw new Error("Invalid font size panel Element"); }
+    
+      if (ZoomPanelEl.classList.contains("show")) { ZoomPanelEl.classList.remove("show"); }
+      
+      d3
+          .select(".font-size-panel")
+          .append("div")
+          .attr("class", "label")
+          .text("Zoom Slider");
+    
+      let ZoomSliderEl = d3
+          .select(".font-size-panel")
+          .append("input")
+          .attr("class", "slider")
+          .attr("type", "range")
+          .attr("min", 0.19)
+          .attr("max", 1)
+          .attr("step", 0.01)
+          .attr("value", 0.19);
+    
+      ZoomSliderEl.on("input", function (e) {
+        const zoomValue = e.target.value;
+        const svg = d3.select(`${containerSelector} .taxonomy-panel svg`);
+    
+        let currentTransform = d3.zoomTransform(svg.node());
+        svg.call(zoom.transform, d3.zoomIdentity.translate(currentTransform.x, currentTransform.y).scale(zoomValue));
+      });
+    }
     
 
+    // Initialize the font size slider and its label.
     function initializeFontSizePanel() {
 
         // Get a reference to the font size panel Element.
@@ -450,6 +478,7 @@ var svg_zoom = d3
 
             // Update the search panel's current release.
             searchPanel.currentRelease = releaseNumber;
+            console.log("Search",e.target.value)
         });
 
         // Select the most recent release.
@@ -472,8 +501,12 @@ var svg_zoom = d3
                 temp = 0;
                 arr = [];
                 Flag = false;
+                Sflag=false;
                 num_flag = false;
                 max = 0;
+                len=0;
+                counter=0;
+                res=[]
                 break;
             }
         }
@@ -699,53 +732,7 @@ var svg_zoom = d3
 
                 update(ds);
 
-                function collapse(d) {
-                    if (d.children) {
-                        if (
-                            d.data.name === "Unassigned" &&
-                            d.data.rankName === "realm" &&
-                            d.data.taxNodeID !== "legend"
-                        ) {
-                            // No name, a rank of "realm", and not part of the legend.
-                            d._children = d.children;
-                            d._children.forEach(collapse);
-                            d.children = null;
-                        } else if (
-                            d.data.name === "Unassigned" &&
-                            d.data.has_assigned_siblings !== true &&
-                            d.data.has_unassigned_siblings !== true
-                        ) {
-                            // No name and it doesn't have assigned or unassigned siblings (so no siblings?).
-                            // TODO: the if condition above can be simplified to:
-                            //      !d.data.name && !d.data.has_assigned_siblings && !d.data.has_unassigned_siblings
-
-                            // dmd 02/08/23 The for loop appears to be unnecessary.
-                            for (var i = 0; i < 1; i++) {
-                                // dmd 02/08/23 "open" isn't referenced anywhere
-                                var open = d.children[i];
-                                d.children.forEach(collapse);
-                            }
-                        } else {
-                            // If the node has either assigned or unassigned siblings.
-                            // TODO: "if (d.data.children.name === null)"" can be included in the if condition below.
-                            if (
-                                d.data.has_assigned_siblings === true ||
-                                d.data.has_unassigned_siblings === true
-                            ) {
-                                // TODO: does the "children" array have a name attribute?
-                                if (d.data.children.name === null) {
-                                    d._children = d.children;
-                                    d._children.forEach(collapse);
-                                    d.children = null;
-                                }
-                            }
-                            d._children = d.children;
-                            d._children.forEach(collapse);
-                            d.children = null;
-                        }
-                    }
-                }
-
+             
                 function update(source) {
                     if (!source) {
                         console.log("in update and source is invalid");
@@ -1236,6 +1223,7 @@ var svg_zoom = d3
                     }
 
                     function click(event, d) {
+                        console.log("click",d.data.name)
                         selected = d.data.name;
                         if (d.data.taxNodeID !== "legend") {
                             if (d.hasOwnProperty("page")) {
@@ -1319,20 +1307,126 @@ var svg_zoom = d3
 
         });
     }
+    function collapse(d) {
+        if (d.children  ) {
+       
+            if(d.data.name===name && counter<len-1){
+                counter++;
+                console.log("hii",name,d.data.name);               
+                for (var i = 0; i < 1; i++) {
+                var open = d.children[i];
+                 console.log(d.children)
+                name=res[counter]
+                d.children.forEach(collapse);    
+                
+                }
+            }
+            else{
+
+            
+            if (
+                d.data.name === "Unassigned" &&
+                d.data.rankName === "realm" &&
+                d.data.taxNodeID !== "legend"
+            ) {
+                // No name, a rank of "realm", and not part of the legend.
+                d._children = d.children;
+                d._children.forEach(collapse);
+                d.children = null;
+            } else if (
+                (d.data.name === "Unassigned" ) &&
+                d.data.has_assigned_siblings !== true &&
+                d.data.has_unassigned_siblings !== true 
+            ) {
+                
+             
+                // No name and it doesn't have assigned or unassigned siblings (so no siblings?).
+                // TODO: the if condition above can be simplified to:
+                //      !d.data.name && !d.data.has_assigned_siblings && !d.data.has_unassigned_siblings
+
+                // dmd 02/08/23 The for loop appears to be unnecessary.
+                for (var i = 0; i < 1; i++) {
+                    // dmd 02/08/23 "open" isn't referenced anywhere
+                    var open = d.children[i];
+                    d.children.forEach(collapse);
+                }
+            } else {
+                // If the node has either assigned or unassigned siblings.
+                // TODO: "if (d.data.children.name === null)"" can be included in the if condition below.
+                if (
+                    d.data.has_assigned_siblings === true ||
+                    d.data.has_unassigned_siblings === true
+                ) {
+                    // TODO: does the "children" array have a name attribute?
+                    if (d.data.children.name === null) {
+                        d._children = d.children;
+                        d._children.forEach(collapse);
+                        d.children = null;
+                    }
+                }
+                d._children = d.children;
+                d._children.forEach(collapse);
+                d.children = null;
+            }
+        }   
+    }
+    
+    }
+
 
     // This function is called when a search result is selected in the searchPanel. A reference to it is 
     // passed as a parameter to the search panel object's "constructor".
     function selectSearchResult(lineage_, releaseNumber_) {
+        // console.log("hi")
 
         // Select the specified release.
         releaseControlEl.value = releaseNumber_;
         releaseControlEl.dispatchEvent(new Event("change"));
 
-        alert("TODO: use lineage to select taxa nodes after the tree has been refreshed")
-
+        // alert("TODO: use lineage to select taxa nodes after the tree has been refreshed")
+        name="";
         const taxa = lineage_.split(">");
         taxa.forEach((taxon_) => {
             console.log(taxon_)
+            name=taxa[0];
+            collapse(name);
+            console.log("name",taxon_.pa);
+            
         })
+        console.log(taxa.length)
+        len=taxa.length
+        Sflag=true;
+        res=taxa;
+    
     }
+   
 };
+function expandTreeToNode(data) {
+      let node = traverseTreeToFindNode(ds, data);
+    expandTree(node);
+}
+
+function traverseTreeToFindNode(currentNode, node) {
+    if (currentNode.name === node) {
+        return currentNode;
+    }
+    for (let i = 0; i < currentNode.children.length; i++) {
+        let result = traverseTreeToFindNode(currentNode.children[i], nodeName);
+        if (result != null) {
+            return result;
+        }
+    }
+    return null;
+}
+// function selectSearchResult(lineage_, releaseNumber_) {   
+//     releaseControlEl.value = releaseNumber_;
+//     releaseControlEl.dispatchEvent(new Event("change"));
+//     const taxa = lineage_.split(">");
+//     taxa.forEach((taxon_) => {
+//         console.log(taxon_);
+//         expandTreeToNode(taxon_);
+//     })
+// }
+
+
+
