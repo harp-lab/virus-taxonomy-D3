@@ -43,7 +43,7 @@ window.ICTV.d3TaxonomyVisualization = function (
     const settings = {
         animationDuration: 900,
         node: {
-            radius: 13,
+            radius: 18,
             strokeWidth: 3,
             textDx: 25,
             textDy: 25,
@@ -996,12 +996,12 @@ window.ICTV.d3TaxonomyVisualization = function (
                                     d.data.rankName === "realm" &&
                                     d.data.taxNodeID !== "legend"
                                 ) {
-                                    return "20px";
+                                    return "25px";
                                 } else if (
                                     d.data.has_assigned_siblings === true ||
                                     d.data.has_unassigned_siblings === true
                                 ) {
-                                    return "20px";
+                                    return "25px";
                                 } else {
                                     return "0px";
                                 }
@@ -1013,12 +1013,46 @@ window.ICTV.d3TaxonomyVisualization = function (
                                     d.data.rankName === "realm" &&
                                     d.data.taxNodeID !== "legend"
                                 ) {
-                                    return "20px";
+                                    return "25px";
                                 } else if (
                                     d.data.has_assigned_siblings === true ||
                                     d.data.has_unassigned_siblings === true
                                 ) {
-                                    return "20px";
+                                    return "25px";
+                                } else {
+                                    return "0px";
+                                }
+                            }
+                        })
+                        .attr("x", function (d) {
+                            if (d.data.name === "Unassigned") {
+                                if (
+                                    d.data.rankName === "realm" &&
+                                    d.data.taxNodeID !== "legend"
+                                ) {
+                                    return "-12px";
+                                } else if (
+                                    d.data.has_assigned_siblings === true ||
+                                    d.data.has_unassigned_siblings === true
+                                ) {
+                                    return "-12px";
+                                } else {
+                                    return "0px";
+                                }
+                            }
+                        })
+                        .attr("y", function (d) {
+                            if (d.data.name === "Unassigned") {
+                                if (
+                                    d.data.rankName === "realm" &&
+                                    d.data.taxNodeID !== "legend"
+                                ) {
+                                    return "-12px";
+                                } else if (
+                                    d.data.has_assigned_siblings === true ||
+                                    d.data.has_unassigned_siblings === true
+                                ) {
+                                    return "-12px";
                                 } else {
                                     return "0px";
                                 }
@@ -1137,7 +1171,7 @@ window.ICTV.d3TaxonomyVisualization = function (
                             var pos = { x: source.x0, y: source.y0 };
                             return diagonal(pos, pos);
                         })
-                        .style("stroke-width", "2px")
+                        .style("stroke-width", "4px")
                         .style("fill", "none")
                         .style("stroke", "#ccc")
                         .style("display", function (d) {
